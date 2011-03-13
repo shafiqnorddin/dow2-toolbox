@@ -209,13 +209,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\DirectoryIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Resources\FileIcon.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CopeShared\CopeCore.csproj">
@@ -246,39 +242,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\copy_clipboard_16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\copy_to_folder_16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cut_clipboard_16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\delete_16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\folder_closed_16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\new_document_16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\open_document_16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\paste_clipboard_16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\save_16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\stop_16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\folder_open_16.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\InstallationInstructions.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -305,21 +268,8 @@
     <None Include="Resources\toolbox_load.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\favorites.png" />
-    <None Include="Resources\document-new-6.png" />
-    <None Include="Resources\document-open-7.png" />
-    <None Include="Resources\document-save-4.png" />
-    <None Include="Resources\edit-copy-6.png" />
-    <None Include="Resources\edit-cut-6.png" />
-    <None Include="Resources\edit-delete-5.png" />
-    <None Include="Resources\edit-paste-6.png" />
     <None Include="Resources\folder.png" />
-    <None Include="Resources\folder-green.png" />
-    <None Include="Resources\folder-new-7.png" />
-    <None Include="Resources\application-exit-3.png" />
     <None Include="Resources\bookmarks.png" />
-    <None Include="Resources\applications-system-4.png" />
-    <None Include="Resources\file.png" />
     <None Include="Resources\document.png" />
     <None Include="Resources\document-new.png" />
     <None Include="Resources\document-open.png" />
