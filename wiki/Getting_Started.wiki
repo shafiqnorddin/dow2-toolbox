@@ -12,7 +12,7 @@ The most important information:
   # _CopeShared_ contains mainly manager classes
   # _ImageViewerPlugin_ is a plugin for the Toolbox which allows images to be viewed
   # _RBFEditorPlugin_ is a plugin as well and includes an RBF editor
-  # _ScarPlugin_ is a plugin and offers very basic support
+  # _ScarPlugin_ is a plugin and offers very basic SCAR support (syntax highlighting)
   # _ModDebug_ is a DLL that enables advanced debugging capabilities by injecting itself into the Game
  * all the code for actually reading/writing game file formats isn't part of this project but of _cope.DawnOfWar2.dll_ from the cope-framework (see further below)
 
