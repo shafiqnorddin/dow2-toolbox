@@ -227,73 +227,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\save_16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\delete_16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cut_clipboard_16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\copy_clipboard_16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\copy_clipboard_lined_16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\copy_to_folder_16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\paste_clipboard_16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\paste_clipboard_lined_16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\favorites_16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\open_document_16.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\RBFDictInfo.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\RBFLibInfo.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\edit-cut-6.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\edit-delete-5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\edit-paste-6.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\favorites.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\folder.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\folder-green.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\folder-new-7.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\document-new-6.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\document-open-7.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\document-save-4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\edit-copy-6.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\edit-copy.png" />
