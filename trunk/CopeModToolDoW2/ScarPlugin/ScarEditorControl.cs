@@ -20,6 +20,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
  */
 using System.IO;
+using cope.Helper;
 using cope.IO;
 using ICSharpCode.AvalonEdit.Highlighting;
 using ModTool.Core.PlugIns;
@@ -69,6 +70,9 @@ namespace ScarPlugin
 
         public override void SaveFile()
         {
+            string directory = m_file.FilePath.SubstringBeforeLast('\\');
+            if (!Directory.Exists(directory))
+                Directory.CreateDirectory(directory);
             var fs = new FileStream(m_file.FilePath, FileMode.Create);
             m_editor.Save(fs);
             var e = new FileActionEventArgs(FileActionType.Save, m_file);
