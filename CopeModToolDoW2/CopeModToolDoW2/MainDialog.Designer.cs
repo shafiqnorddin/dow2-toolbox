@@ -35,7 +35,7 @@ namespace ModTool.FE
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainDialog));
-            this._mes_main = new System.Windows.Forms.MenuStrip();
+            this.m_mesMain = new System.Windows.Forms.MenuStrip();
             this.startToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newDoW2ModToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openRBFStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,8 +60,8 @@ namespace ModTool.FE
             this._dlg_folderBrowser = new System.Windows.Forms.FolderBrowserDialog();
             this.m_mainSplitContainer = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this._tbc_tools = new System.Windows.Forms.TabControl();
-            this._tpg_combinedView = new System.Windows.Forms.TabPage();
+            this.m_tbcTools = new System.Windows.Forms.TabControl();
+            this.m_tpgCombinedView = new System.Windows.Forms.TabPage();
             this.m_fitCombined = new ModTool.Core.FileTreeControl();
             this.m_cmsFileTreeCombined = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.createFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,7 +75,7 @@ namespace ModTool.FE
             this.openAsTextToolStripMenuItem_combined = new System.Windows.Forms.ToolStripMenuItem();
             this.renameToolStripMenuItem_combined = new System.Windows.Forms.ToolStripMenuItem();
             this.pasteFileToolStripMenuItem_combined = new System.Windows.Forms.ToolStripMenuItem();
-            this._tpg_virtualView = new System.Windows.Forms.TabPage();
+            this.m_tpgVirtualView = new System.Windows.Forms.TabPage();
             this.m_fitVirtual = new ModTool.Core.FileTreeControl();
             this.m_cmsFileTreeVirtual = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.extractFileToolStripMenuItem_virtual = new System.Windows.Forms.ToolStripMenuItem();
@@ -88,22 +88,22 @@ namespace ModTool.FE
             this.tlpApps = new System.Windows.Forms.TableLayoutPanel();
             this.tlpButtonRow = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_close_tab = new System.Windows.Forms.Button();
+            this.m_btnCloseTab = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_close_all_tabs = new System.Windows.Forms.Button();
-            this.m_tbcApps = new System.Windows.Forms.TabControl();
+            this.m_btnCloseAllTabs = new System.Windows.Forms.Button();
+            this.m_tbcApps = new cope.UI.TabControlExt();
             this.m_dlgOpenSGA = new System.Windows.Forms.OpenFileDialog();
             this.m_dlgOpenRBF = new System.Windows.Forms.OpenFileDialog();
-            this._mes_main.SuspendLayout();
+            this.m_mesMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_mainSplitContainer)).BeginInit();
             this.m_mainSplitContainer.Panel1.SuspendLayout();
             this.m_mainSplitContainer.Panel2.SuspendLayout();
             this.m_mainSplitContainer.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this._tbc_tools.SuspendLayout();
-            this._tpg_combinedView.SuspendLayout();
+            this.m_tbcTools.SuspendLayout();
+            this.m_tpgCombinedView.SuspendLayout();
             this.m_cmsFileTreeCombined.SuspendLayout();
-            this._tpg_virtualView.SuspendLayout();
+            this.m_tpgVirtualView.SuspendLayout();
             this.m_cmsFileTreeVirtual.SuspendLayout();
             this.tlpMain.SuspendLayout();
             this.tlpApps.SuspendLayout();
@@ -112,20 +112,20 @@ namespace ModTool.FE
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // _mes_main
+            // m_mesMain
             // 
-            this._mes_main.BackColor = System.Drawing.SystemColors.Control;
-            this._mes_main.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.m_mesMain.BackColor = System.Drawing.SystemColors.Control;
+            this.m_mesMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.startToolStripMenuItem,
             this.toolsToolStripMenuItem,
             this.viewToolStripMenuItem,
             this.plugInsToolStripMenuItem});
-            this._mes_main.Location = new System.Drawing.Point(0, 0);
-            this._mes_main.Name = "_mes_main";
-            this._mes_main.Size = new System.Drawing.Size(1008, 24);
-            this._mes_main.TabIndex = 0;
-            this._mes_main.Text = "menuStrip1";
-            this._mes_main.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TbcAppsKeyDown);
+            this.m_mesMain.Location = new System.Drawing.Point(0, 0);
+            this.m_mesMain.Name = "m_mesMain";
+            this.m_mesMain.Size = new System.Drawing.Size(1008, 24);
+            this.m_mesMain.TabIndex = 0;
+            this.m_mesMain.Text = "menuStrip1";
+            this.m_mesMain.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TbcAppsKeyDown);
             // 
             // startToolStripMenuItem
             // 
@@ -326,7 +326,7 @@ namespace ModTool.FE
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this._tbc_tools, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.m_tbcTools, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -335,26 +335,26 @@ namespace ModTool.FE
             this.tableLayoutPanel1.Size = new System.Drawing.Size(259, 618);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // _tbc_tools
+            // m_tbcTools
             // 
-            this._tbc_tools.Controls.Add(this._tpg_combinedView);
-            this._tbc_tools.Controls.Add(this._tpg_virtualView);
-            this._tbc_tools.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._tbc_tools.Location = new System.Drawing.Point(3, 3);
-            this._tbc_tools.Name = "_tbc_tools";
-            this._tbc_tools.SelectedIndex = 0;
-            this._tbc_tools.Size = new System.Drawing.Size(253, 612);
-            this._tbc_tools.TabIndex = 5;
+            this.m_tbcTools.Controls.Add(this.m_tpgCombinedView);
+            this.m_tbcTools.Controls.Add(this.m_tpgVirtualView);
+            this.m_tbcTools.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.m_tbcTools.Location = new System.Drawing.Point(3, 3);
+            this.m_tbcTools.Name = "m_tbcTools";
+            this.m_tbcTools.SelectedIndex = 0;
+            this.m_tbcTools.Size = new System.Drawing.Size(253, 612);
+            this.m_tbcTools.TabIndex = 5;
             // 
-            // _tpg_combinedView
+            // m_tpgCombinedView
             // 
-            this._tpg_combinedView.Controls.Add(this.m_fitCombined);
-            this._tpg_combinedView.Location = new System.Drawing.Point(4, 22);
-            this._tpg_combinedView.Name = "_tpg_combinedView";
-            this._tpg_combinedView.Size = new System.Drawing.Size(245, 586);
-            this._tpg_combinedView.TabIndex = 0;
-            this._tpg_combinedView.Text = "Combined";
-            this._tpg_combinedView.UseVisualStyleBackColor = true;
+            this.m_tpgCombinedView.Controls.Add(this.m_fitCombined);
+            this.m_tpgCombinedView.Location = new System.Drawing.Point(4, 22);
+            this.m_tpgCombinedView.Name = "m_tpgCombinedView";
+            this.m_tpgCombinedView.Size = new System.Drawing.Size(245, 586);
+            this.m_tpgCombinedView.TabIndex = 0;
+            this.m_tpgCombinedView.Text = "Combined";
+            this.m_tpgCombinedView.UseVisualStyleBackColor = true;
             // 
             // m_fitCombined
             // 
@@ -480,15 +480,15 @@ namespace ModTool.FE
             this.pasteFileToolStripMenuItem_combined.Text = "Paste File";
             this.pasteFileToolStripMenuItem_combined.Click += new System.EventHandler(this.PasteToolStripMenuItemCombinedClick);
             // 
-            // _tpg_virtualView
+            // m_tpgVirtualView
             // 
-            this._tpg_virtualView.Controls.Add(this.m_fitVirtual);
-            this._tpg_virtualView.Location = new System.Drawing.Point(4, 22);
-            this._tpg_virtualView.Name = "_tpg_virtualView";
-            this._tpg_virtualView.Size = new System.Drawing.Size(245, 586);
-            this._tpg_virtualView.TabIndex = 1;
-            this._tpg_virtualView.Text = "Virtual";
-            this._tpg_virtualView.UseVisualStyleBackColor = true;
+            this.m_tpgVirtualView.Controls.Add(this.m_fitVirtual);
+            this.m_tpgVirtualView.Location = new System.Drawing.Point(4, 22);
+            this.m_tpgVirtualView.Name = "m_tpgVirtualView";
+            this.m_tpgVirtualView.Size = new System.Drawing.Size(245, 586);
+            this.m_tpgVirtualView.TabIndex = 1;
+            this.m_tpgVirtualView.Text = "Virtual";
+            this.m_tpgVirtualView.UseVisualStyleBackColor = true;
             // 
             // m_fitVirtual
             // 
@@ -620,42 +620,42 @@ namespace ModTool.FE
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btn_close_tab);
+            this.panel1.Controls.Add(this.m_btnCloseTab);
             this.panel1.Location = new System.Drawing.Point(658, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(72, 24);
             this.panel1.TabIndex = 0;
             // 
-            // btn_close_tab
+            // m_btnCloseTab
             // 
-            this.btn_close_tab.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_close_tab.Location = new System.Drawing.Point(0, 0);
-            this.btn_close_tab.Name = "btn_close_tab";
-            this.btn_close_tab.Size = new System.Drawing.Size(72, 24);
-            this.btn_close_tab.TabIndex = 0;
-            this.btn_close_tab.Text = "Close Tab";
-            this.btn_close_tab.UseVisualStyleBackColor = true;
-            this.btn_close_tab.Click += new System.EventHandler(this.BtnCloseTabClick);
+            this.m_btnCloseTab.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.m_btnCloseTab.Location = new System.Drawing.Point(0, 0);
+            this.m_btnCloseTab.Name = "m_btnCloseTab";
+            this.m_btnCloseTab.Size = new System.Drawing.Size(72, 24);
+            this.m_btnCloseTab.TabIndex = 0;
+            this.m_btnCloseTab.Text = "Close Tab";
+            this.m_btnCloseTab.UseVisualStyleBackColor = true;
+            this.m_btnCloseTab.Click += new System.EventHandler(this.BtnCloseTabClick);
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.btn_close_all_tabs);
+            this.panel2.Controls.Add(this.m_btnCloseAllTabs);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(562, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(90, 24);
             this.panel2.TabIndex = 1;
             // 
-            // btn_close_all_tabs
+            // m_btnCloseAllTabs
             // 
-            this.btn_close_all_tabs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_close_all_tabs.Location = new System.Drawing.Point(0, 0);
-            this.btn_close_all_tabs.Name = "btn_close_all_tabs";
-            this.btn_close_all_tabs.Size = new System.Drawing.Size(90, 24);
-            this.btn_close_all_tabs.TabIndex = 0;
-            this.btn_close_all_tabs.Text = "Close All Tabs";
-            this.btn_close_all_tabs.UseVisualStyleBackColor = true;
-            this.btn_close_all_tabs.Click += new System.EventHandler(this.BtnCloseAllTabsClick);
+            this.m_btnCloseAllTabs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.m_btnCloseAllTabs.Location = new System.Drawing.Point(0, 0);
+            this.m_btnCloseAllTabs.Name = "m_btnCloseAllTabs";
+            this.m_btnCloseAllTabs.Size = new System.Drawing.Size(90, 24);
+            this.m_btnCloseAllTabs.TabIndex = 0;
+            this.m_btnCloseAllTabs.Text = "Close All Tabs";
+            this.m_btnCloseAllTabs.UseVisualStyleBackColor = true;
+            this.m_btnCloseAllTabs.Click += new System.EventHandler(this.BtnCloseAllTabsClick);
             // 
             // m_tbcApps
             // 
@@ -666,6 +666,7 @@ namespace ModTool.FE
             this.m_tbcApps.SelectedIndex = 0;
             this.m_tbcApps.Size = new System.Drawing.Size(739, 576);
             this.m_tbcApps.TabIndex = 0;
+            this.m_tbcApps.TabHeaderClicked += new cope.UI.TabHeaderClickedHandler(this.TbcAppsHeaderClicked);
             this.m_tbcApps.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TbcAppsKeyDown);
             // 
             // m_dlgOpenSGA
@@ -683,26 +684,26 @@ namespace ModTool.FE
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 642);
             this.Controls.Add(this.m_mainSplitContainer);
-            this.Controls.Add(this._mes_main);
+            this.Controls.Add(this.m_mesMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this._mes_main;
+            this.MainMenuStrip = this.m_mesMain;
             this.MinimumSize = new System.Drawing.Size(462, 100);
             this.Name = "MainDialog";
             this.Text = "Cope\'s DoW2 Toolbox";
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.MainDialogDragDrop);
             this.DragOver += new System.Windows.Forms.DragEventHandler(this.MainDialogDragOver);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TbcAppsKeyDown);
-            this._mes_main.ResumeLayout(false);
-            this._mes_main.PerformLayout();
+            this.m_mesMain.ResumeLayout(false);
+            this.m_mesMain.PerformLayout();
             this.m_mainSplitContainer.Panel1.ResumeLayout(false);
             this.m_mainSplitContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_mainSplitContainer)).EndInit();
             this.m_mainSplitContainer.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this._tbc_tools.ResumeLayout(false);
-            this._tpg_combinedView.ResumeLayout(false);
+            this.m_tbcTools.ResumeLayout(false);
+            this.m_tpgCombinedView.ResumeLayout(false);
             this.m_cmsFileTreeCombined.ResumeLayout(false);
-            this._tpg_virtualView.ResumeLayout(false);
+            this.m_tpgVirtualView.ResumeLayout(false);
             this.m_cmsFileTreeVirtual.ResumeLayout(false);
             this.tlpMain.ResumeLayout(false);
             this.tlpApps.ResumeLayout(false);
@@ -716,7 +717,7 @@ namespace ModTool.FE
 
         #endregion Vom Windows Form-Designer generierter Code
 
-        private System.Windows.Forms.MenuStrip _mes_main;
+        private System.Windows.Forms.MenuStrip m_mesMain;
         private System.Windows.Forms.ImageList m_imlDirectoryView;
         private System.Windows.Forms.ToolStripMenuItem startToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openModToolStripMenuItem;
@@ -729,9 +730,9 @@ namespace ModTool.FE
         private System.Windows.Forms.TableLayoutPanel tlpApps;
         private System.Windows.Forms.TableLayoutPanel tlpButtonRow;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btn_close_tab;
+        private System.Windows.Forms.Button m_btnCloseTab;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btn_close_all_tabs;
+        private System.Windows.Forms.Button m_btnCloseAllTabs;
         private System.Windows.Forms.ContextMenuStrip m_cmsFileTreeVirtual;
         private System.Windows.Forms.ToolStripMenuItem extractFileToolStripMenuItem_virtual;
         private System.Windows.Forms.ToolStripMenuItem openInExplorerToolStripMenuItem_virtual;
@@ -744,12 +745,12 @@ namespace ModTool.FE
         private System.Windows.Forms.ToolStripMenuItem fileTypeManagerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newDoW2ModToolStripMenuItem;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TabControl m_tbcApps;
-        private System.Windows.Forms.TabControl _tbc_tools;
-        private System.Windows.Forms.TabPage _tpg_combinedView;
+        private cope.UI.TabControlExt m_tbcApps;
+        private System.Windows.Forms.TabControl m_tbcTools;
+        private System.Windows.Forms.TabPage m_tpgCombinedView;
         private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
         private Core.FileTreeControl m_fitCombined;
-        private System.Windows.Forms.TabPage _tpg_virtualView;
+        private System.Windows.Forms.TabPage m_tpgVirtualView;
         private Core.FileTreeControl m_fitVirtual;
         private System.Windows.Forms.ContextMenuStrip m_cmsFileTreeCombined;
         private System.Windows.Forms.ToolStripMenuItem extractToolStripMenuItem_combined;
