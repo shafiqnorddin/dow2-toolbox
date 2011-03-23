@@ -681,7 +681,7 @@ namespace ModTool.FE
             var rf = new RenameFile("Name of copy") {NewName = name};
             if (rf.ShowDialog() == DialogResult.Cancel)
                 return;
-            string dirPath = selected.Path.SubstringBeforeLast('\\', true);
+            name = rf.NewName;
             PasteNode(selected, selected.Parent, name);
         }
 
