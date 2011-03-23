@@ -850,21 +850,19 @@ namespace ModTool.FE
             UniFile uniFile = GetUniFileFromNode(node, onlyVirtual);
             if (uniFile == null)
                 return;
-            if (!Settings.Default.bAppAllowOpeningTwice && FileManager.OpenFiles.Contains(uniFile.FilePath))
-            {
-                UIHelper.ShowWarning(
-                    "You're already editing the file you're trying to load! You cannot reopen it. View the options-menu to remove this limitation.");
-                return;
-            }
             try
             {
-                FileManager.LoadFile(uniFile, forceText);
+                var filetool = FileManager.LoadFile(uniFile, forceText);
+                if (filetool.Parent != null && filetool.Parent is TabPage)
+                {
+                    m_tbcApps.SelectedTab = filetool.Parent as TabPage;
+                }
             }
             catch (Exception ex)
             {
                 LoggingManager.SendMessage("FE - failed to open file");
                 LoggingManager.HandleException(ex);
-                 UIHelper.ShowError("Error while opening the selected file: " + ex.Message);
+                UIHelper.ShowError("Error while opening the selected file: " + ex.Message);
             }
         }
 

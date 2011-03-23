@@ -51,7 +51,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(148, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Cope\'s DoW2 Toolbox, V1.96";
+            this.label1.Text = "Cope\'s DoW2 Toolbox, V1.97";
             // 
             // label2
             // 
@@ -60,7 +60,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "-cope. 3/12/2010";
+            this.label2.Text = "-cope. 3/23/2010";
             // 
             // m_rtbAboutBox
             // 
