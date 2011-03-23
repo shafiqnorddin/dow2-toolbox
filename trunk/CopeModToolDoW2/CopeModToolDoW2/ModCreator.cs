@@ -63,6 +63,7 @@ namespace ModTool.FE
         {
             LoggingManager.SendMessage("ModCreator - Creating new mod...");
 
+            ModManager.GameDirectory = m_sBaseModulePath.SubstringBeforeLast('\\');
             var baseModule = new ModuleFile(m_sBaseModulePath);
             baseModule.Close();
 

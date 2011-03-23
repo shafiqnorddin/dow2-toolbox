@@ -19,6 +19,8 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
  */
+using System;
+using System.Diagnostics;
 using System.IO;
 using System.Threading;
 using System.Windows.Forms;
@@ -82,7 +84,7 @@ namespace ModTool.FE
                 advDebug = Properties.Settings.Default.bUseAdvancedDebug;
             else
                 LoggingManager.SendMessage("DebugManager - Current user has insufficient rights to use advanced debugging.");
-            System.Diagnostics.Process.Start(Properties.Settings.Default.sSteamExecutable, param);
+            Process.Start(Properties.Settings.Default.sSteamExecutable, param);
             if (advDebug)
             {
                 Thread.Sleep(2000);
@@ -108,6 +110,25 @@ namespace ModTool.FE
                 return null;
             }
             return rkSteamPath.GetValue("SteamPath").ToString();
+        }
+
+        public static void OpenLogfileDirectory()
+        {
+            string userPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments,
+                                                        Environment.SpecialFolderOption.None);
+            if (!Directory.Exists(userPath))
+            {
+                UIHelper.ShowError("The 'My Documents' directory does not exist!");
+                return;
+            }
+            string path = userPath;
+            if (ToolSettings.IsInRetributionMode)
+                path += GameConstants.LOG_FILE_PATH_RETRIBUTION;
+            else
+                path += GameConstants.LOG_FILE_PATH;
+            if (!Directory.Exists(path))
+                Directory.CreateDirectory(path);
+            Process.Start(path);
         }
 
         #endregion methods
