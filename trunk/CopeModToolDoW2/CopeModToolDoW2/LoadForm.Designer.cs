@@ -45,7 +45,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.UseWaitCursor = true;
             // 
             // m_btnDonate
             // 
@@ -60,7 +59,6 @@
             this.m_btnDonate.TabIndex = 1;
             this.m_btnDonate.Text = "Support the developer";
             this.m_btnDonate.UseVisualStyleBackColor = false;
-            this.m_btnDonate.UseWaitCursor = true;
             this.m_btnDonate.Click += new System.EventHandler(this.DonateButtonClick);
             // 
             // LoadForm
