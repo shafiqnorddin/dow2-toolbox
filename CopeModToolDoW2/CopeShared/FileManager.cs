@@ -54,10 +54,6 @@ namespace ModTool.Core
 
         #endregion events
 
-        #region mod-manager bridge
-
-        #endregion mod-manager bridge
-
         #region methods
 
         static internal void FillTrees()
@@ -82,6 +78,9 @@ namespace ModTool.Core
         /// <returns></returns>
         static public FileTool LoadFile(UniFile file, bool forceText = false)
         {
+            if (!AllowOpeningFilesTwice && s_openTools.ContainsKey(file.FilePath))
+                return s_openTools[file.FilePath];
+
             FileTool tmp;
             if (forceText)
             {
@@ -91,7 +90,7 @@ namespace ModTool.Core
                 }
                 catch (Exception e)
                 {
-                    UIHelper.ShowError("Can't open the selected file {0} as Text: {1}", file.FileName, e.Message);
+                    UIHelper.ShowError("Can't open the selected file " + file.FileName  +" as Text: " + e.Message);
                     return null;
                 }
             }
@@ -112,7 +111,7 @@ namespace ModTool.Core
                     catch
                     {
                         file.Close();
-                        UIHelper.ShowError("Can't open the selected file {0}, no suitable plugin found!", file.FileName);
+                        UIHelper.ShowError("Can't open the selected file " + file.FileName + ", no suitable plugin found!");
                         return null;
                     }
                 }
@@ -143,11 +142,13 @@ namespace ModTool.Core
             if (!File.Exists(path))
                 return null;
             var file = new UniFile(path);
-            return LoadFile(file);
+            return LoadFile(file, plugin);
         }
 
         static public FileTool LoadFile(UniFile file, FileTypePlugin plugin)
         {
+            if (!AllowOpeningFilesTwice && s_openTools.ContainsKey(file.FilePath))
+                return s_openTools[file.FilePath];
             FileTool tool;
             try
             {
