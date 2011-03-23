@@ -29,7 +29,7 @@ namespace ModTool.Core
 
         public const string DOW2_PATH_FROM_STEAM = "\\steamapps\\common\\dawn of war 2\\";
         public const string RETRIBUTION_PATH_FROM_STEAM = "\\steamapps\\common\\dawn of war ii - retribution\\";
-        // Todo: support for Retribution log files
-        public const string LOG_FILE_PATH_FROM_HOME = "\\My Games\\Dawn of War 2\\Logfiles";
+        public const string LOG_FILE_PATH = "\\My Games\\Dawn of War 2\\Logfiles";
+        public const string LOG_FILE_PATH_RETRIBUTION = "\\My Games\\dawn of war ii - retribution\\Logfiles";
     }
 }

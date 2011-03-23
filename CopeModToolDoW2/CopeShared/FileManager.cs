@@ -134,7 +134,7 @@ namespace ModTool.Core
         {
             if (!File.Exists(path))
                 return null;
-            var file = new UniFile(path);
+            var file = new UniFile(path, FileAccess.ReadWrite, FileShare.Read);
             return LoadFile(file);
         }
 
