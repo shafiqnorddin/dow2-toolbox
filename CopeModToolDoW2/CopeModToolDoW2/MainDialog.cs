@@ -316,17 +316,7 @@ namespace ModTool.FE
 
         private void OpenDoW2LogDirectoryToolStripMenuItemClick(object sender, EventArgs e)
         {
-            string userPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments,
-                                                        Environment.SpecialFolderOption.None);
-            if (!Directory.Exists(userPath))
-            {
-                 UIHelper.ShowError("The 'My Documents' directory does not exist!");
-                return;
-            }
-            string path = userPath + GameConstants.LOG_FILE_PATH_FROM_HOME;
-            if (!Directory.Exists(path))
-                Directory.CreateDirectory(path);
-            Process.Start(path);
+            MainManager.OpenLogfileDirectory();
         }
 
         private void OptionsToolStripMenuItemClick(object sender, EventArgs e)
