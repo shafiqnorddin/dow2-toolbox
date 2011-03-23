@@ -36,7 +36,6 @@ namespace ModTool.FE
             m_chkbxCopyToClipboard.Checked = Settings.Default.bUCSCopyIndexToClipboard;
             m_chkbxAutoIndex.Checked = Settings.Default.bUCSAutoIndex;
             m_nupIndex.Value = UCSManager.NextIndex;
-            m_rtbUCSText.Focus();
         }
 
         private void BtnCancelClick(object sender, EventArgs e)
@@ -85,6 +84,11 @@ namespace ModTool.FE
             }
             else
                 m_nupIndex.Enabled = true;
+        }
+
+        private void UCSAdderShown(object sender, EventArgs e)
+        {
+            m_rtbUCSText.Focus();
         }
     }
 }
