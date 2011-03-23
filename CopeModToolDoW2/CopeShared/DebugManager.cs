@@ -34,21 +34,26 @@ namespace ModTool.Core
     /// </summary>
     public static class DebugManager
     {
+        #region fields
+
         private static ForwardPortClient s_client;
         private static DebugWindow s_window;
         private static readonly Stack<string> s_log = new Stack<string>();
         private static DummyReceiver s_callbackReceiver;
+
         // signature of GFWL memory check residing in xlive.dll
         private static readonly byte[] s_memoryCheckSignature = new byte[]
                                                                     {
                                                                         0x8B, 0xFF, 0x55, 0x8B, 0xEC, 0x83, 0xEC, 0x20,
-                                                                        0x53, 0x56, 0x57, 0x8D, 0x45, 0xE0, 0x33
-                                                                        , 0xF6, 0x50, 0xFF, 0x75, 0x0C
+                                                                        0x53, 0x56, 0x57, 0x8D, 0x45, 0xE0, 0x33,
+                                                                        0xF6, 0x50, 0xFF, 0x75, 0x0C
                                                                     };
         // patch for the GFWL memory check
         // translates to ASM as:
         // retn     0xC;
-        private static readonly byte[] s_memoryCheckPatch = new byte[] {0xC2, 0x0C, 0x00};
+        private static readonly byte[] s_memoryCheckPatch = new byte[] { 0xC2, 0x0C, 0x00 };
+
+        #endregion
 
         /// <summary>
         /// This class handles callbacks from the ForwardOperationsBase.
@@ -82,6 +87,14 @@ namespace ModTool.Core
             catch
             {
                 // might throw exceptions which actually aren't important as we're shutting down anyway
+            }
+        }
+
+        private static void OnGameExited(object sender, EventArgs e)
+        {
+            if (s_window != null)
+            {
+                s_window.Close();
             }
         }
 
@@ -170,6 +183,7 @@ namespace ModTool.Core
                 return;
             }
             LogMessage("Setup done!");
+            dow2.Exited += OnGameExited;
         }
 
         /// <summary>
@@ -263,9 +277,9 @@ namespace ModTool.Core
                 LogMessage(answer);
                 return answer;
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                LogMessage("CONNECTION LOST: " + e.Message);
+                LogMessage("CONNECTION LOST: " + ex.Message);
                 return null;
             }
         }
