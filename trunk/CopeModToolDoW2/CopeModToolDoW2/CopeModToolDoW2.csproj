@@ -166,6 +166,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainDialog.resx">
       <DependentUpon>MainDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ModInfoDisplay.resx">
       <DependentUpon>ModInfoDisplay.cs</DependentUpon>

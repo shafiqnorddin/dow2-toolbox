@@ -140,8 +140,17 @@ namespace ModTool.FE
                 {
                     foreach (Control c in m_tbcApps.SelectedTab.Controls)
                         if (c is FileTool)
-                            ((FileTool) c).SaveFile();
+                            (c as FileTool).SaveFile();
                 }
+            }
+        }
+
+        private void TbcAppsHeaderClicked(object sender, MouseEventArgs e, int tabIndex)
+        {
+            if (e.Button == MouseButtons.Middle)
+            {
+                TabPage page = m_tbcApps.TabPages[tabIndex];
+                CloseTab(page);
             }
         }
 
