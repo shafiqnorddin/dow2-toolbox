@@ -158,6 +158,18 @@
     <Compile Include="UCSAdder.Designer.cs">
       <DependentUpon>UCSAdder.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCSEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCSEditor.Designer.cs">
+      <DependentUpon>UCSEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCSEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UCSEditorForm.Designer.cs">
+      <DependentUpon>UCSEditorForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,6 +210,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCSAdder.resx">
       <DependentUpon>UCSAdder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCSEditor.resx">
+      <DependentUpon>UCSEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCSEditorForm.resx">
+      <DependentUpon>UCSEditorForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

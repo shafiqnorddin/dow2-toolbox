@@ -40,6 +40,7 @@ namespace ModTool.FE
 
         private FSNode m_fileTreeClipboard;
         private LoadForm m_loadForm = new LoadForm();
+        private UCSEditorForm m_ucsEditor;
 
         #endregion fields
 
@@ -176,6 +177,7 @@ namespace ModTool.FE
             releaseModToolStripMenuItem.Enabled = false;
             addUCSStringToolStripMenuItem.Enabled = false;
             modSettingsToolStripMenuItem.Enabled = false;
+            ucsEditorToolStripMenuItem.Enabled = false;
         }
 
         private void ModManagerModLoaded()
@@ -353,6 +355,13 @@ namespace ModTool.FE
         private void TestModToolStripMenuItemClick(object sender, EventArgs e)
         {
             MainManager.TestMod();
+        }
+
+        private void UCSEditorToolStripMenuItemClick(object sender, EventArgs e)
+        {
+            if (m_ucsEditor == null || m_ucsEditor.IsDisposed)
+                m_ucsEditor = new UCSEditorForm();
+            m_ucsEditor.Show();
         }
 
         #endregion tools menu
@@ -839,6 +848,7 @@ namespace ModTool.FE
             releaseModToolStripMenuItem.Enabled = true;
             addUCSStringToolStripMenuItem.Enabled = true;
             modSettingsToolStripMenuItem.Enabled = true;
+            ucsEditorToolStripMenuItem.Enabled = true;
             CloseLoadForm();
         }
 
