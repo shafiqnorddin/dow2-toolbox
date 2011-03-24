@@ -58,7 +58,7 @@ namespace RBFPlugin
                 result = new SearchResult(pathInTree);
                 m_results.Add(pathInTree, result);
             }
-            result.Values.AddRange(attribValues);
+            result.AddValues(attribValues);
             if (result.Values.Count == 0)
                 return;
             MethodInvoker adder = () => m_lbxSearchResults.Items.Add(result);
@@ -196,10 +196,17 @@ namespace RBFPlugin
             public readonly List<string> ValuePaths;
             public readonly List<AttributeValue> Values;
 
-            public void AddValue(AttributeValue rbfv)
+            public void AddValue(AttributeValue value)
             {
-                Values.Add(rbfv);
-                ValuePaths.Add(rbfv.GetPath());
+                Values.Add(value);
+                ValuePaths.Add(value.GetPath());
+            }
+
+            public void AddValues(IEnumerable<AttributeValue> values)
+            {
+                Values.AddRange(values);
+                foreach (var value in values)
+                    ValuePaths.Add(value.GetPath());
             }
 
             public override string ToString()
