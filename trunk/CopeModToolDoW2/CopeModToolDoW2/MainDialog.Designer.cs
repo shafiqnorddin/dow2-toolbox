@@ -52,6 +52,7 @@ namespace ModTool.FE
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.releaseModToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testModToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ucsEditorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toggleDirectoryViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.plugInsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -202,7 +203,8 @@ namespace ModTool.FE
             this.openDoW2LogDirectoryToolStripMenuItem,
             this.optionsToolStripMenuItem,
             this.releaseModToolStripMenuItem,
-            this.testModToolStripMenuItem});
+            this.testModToolStripMenuItem,
+            this.ucsEditorToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
             this.toolsToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.toolsToolStripMenuItem.Text = "Tools";
@@ -269,6 +271,14 @@ namespace ModTool.FE
             this.testModToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
             this.testModToolStripMenuItem.Text = "Test Mod";
             this.testModToolStripMenuItem.Click += new System.EventHandler(this.TestModToolStripMenuItemClick);
+            // 
+            // ucsEditorToolStripMenuItem
+            // 
+            this.ucsEditorToolStripMenuItem.Enabled = false;
+            this.ucsEditorToolStripMenuItem.Name = "ucsEditorToolStripMenuItem";
+            this.ucsEditorToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
+            this.ucsEditorToolStripMenuItem.Text = "UCS Editor";
+            this.ucsEditorToolStripMenuItem.Click += new System.EventHandler(this.UCSEditorToolStripMenuItemClick);
             // 
             // viewToolStripMenuItem
             // 
@@ -776,5 +786,6 @@ namespace ModTool.FE
         private System.Windows.Forms.ToolStripMenuItem copyFileToolStripMenuItem_virtual;
         private ToolStripMenuItem createFolderToolStripMenuItem;
         private ToolStripMenuItem createCopyToolStripMenuItemCombined;
+        private ToolStripMenuItem ucsEditorToolStripMenuItem;
     }
 }
