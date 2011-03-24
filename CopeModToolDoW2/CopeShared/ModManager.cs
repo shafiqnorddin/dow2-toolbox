@@ -373,11 +373,11 @@ namespace ModTool.Core
                 ModDataArchives.Clear();
             }
 
-            ModName = null;
-
             FileManager.ReleaseFileTrees();
             if (ModUnloaded != null)
                 ModUnloaded();
+
+            ModName = null;
             // normally it isn't a good idea to manually invoke the GarbageCollection but in this case we're releasing
             // gigabytes of resources; the overall performance greatly benefits from this 
             LoggingManager.SendMessage("ModManager - Manual GarbageCollection in all generations in progess...");
