@@ -21,12 +21,12 @@ THE SOFTWARE.
  */
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using cope.DawnOfWar2.RelicAttribute;
 using cope.IO;
 using cope.Helper;
-using System.Linq;
 using ModTool.Core;
 
 namespace RBFPlugin
@@ -35,8 +35,11 @@ namespace RBFPlugin
     {
         private readonly MethodInvoker m_advanceProgress;
         private Dictionary<string, SearchResult> m_results;
-        private string m_searchText;
+        private string m_sSearchKey;
+        private string m_sSearchValue;
         private bool m_bSearchForKey;
+        private bool m_bSearchForValue;
+        private bool m_bFullText;
         private RBFCrawler m_crawler;
 
         public RBFSearchForm()
@@ -45,26 +48,72 @@ namespace RBFPlugin
             m_advanceProgress = new MethodInvoker(m_progBarSearch.PerformStep);
         }
 
+        private void Search(AttributeStructure data, string pathInTree)
+        {
+            IEnumerable<AttributeValue> attribValues = data.Root.Where(SatisfiesCondition);
+
+            SearchResult result;
+            if (!m_results.TryGetValue(pathInTree, out result))
+            {
+                result = new SearchResult(pathInTree);
+                m_results.Add(pathInTree, result);
+            }
+            result.Values.AddRange(attribValues);
+            if (result.Values.Count == 0)
+                return;
+            MethodInvoker adder = () => m_lbxSearchResults.Items.Add(result);
+            Invoke(adder);
+        }
+
+        private bool SatisfiesCondition(AttributeValue value)
+        {
+            if (m_bSearchForKey)
+            {
+                if (m_bFullText)
+                {
+                    if (!value.Key.Contains(m_sSearchKey))
+                        return false;
+                }
+                else if (value.Key != m_sSearchKey)
+                    return false;
+            }
+
+            if (m_bSearchForValue)
+            {
+                if (value.DataType != AttributeDataType.String)
+                    return false;
+                if (m_bFullText)
+                {
+                    if (!(value.Data as string).Contains(m_sSearchValue))
+                        return false;
+                }
+                else if ((value.Data as string) != m_sSearchValue)
+                    return false;
+            }
+            return true;
+        }
+
         private void BtnSearchClick(object sender, EventArgs e)
         {
-            if (m_tbxSearchText.Text == string.Empty)
+            if (!m_chkbxSearchForKey.Checked && !m_chkbxSearchForValue.Checked)
             {
-                 UIHelper.ShowError("No valid search-key entered!");
+                UIHelper.ShowError("No search criteria specified!");
                 return;
             }
             if (FileManager.AttribTree == null)
             {
-                 UIHelper.ShowError("The attrib-tree could not be found! Ensure that there is a mod loaded");
+                UIHelper.ShowError("The attrib-tree could not be found! Ensure that there is a mod loaded");
                 return;
             }
-            FSNodeDir startingNode = _tbx_initialNode.Text == string.Empty
+            FSNodeDir startingNode = m_tbxInitialNode.Text == string.Empty
                                          ? FileManager.AttribTree.RootNode
-                                         : FileManager.AttribTree.RootNode.GetSubNodeByPath(_tbx_initialNode.Text) as
+                                         : FileManager.AttribTree.RootNode.GetSubNodeByPath(m_tbxInitialNode.Text) as
                                            FSNodeDir;
             if (startingNode == null)
             {
-                 UIHelper.ShowError(
-                    "The specified starting node could not be found or is not a directory! Ensure that it exists in the attrib-tree!");
+                UIHelper.ShowError(
+                    "The specified starting node could not be found or is not a directory! " +
+                    "Ensure that it exists in the attrib-tree!");
                 return;
             }
             m_lbxSearchResults.Items.Clear();
@@ -72,8 +121,11 @@ namespace RBFPlugin
             m_progBarSearch.Step = 1;
             m_progBarSearch.Minimum = 1;
             m_progBarSearch.Maximum = startingNode.GetTotalFileCount();
-            m_searchText = m_tbxSearchText.Text;
-            m_bSearchForKey = m_radbtnSearchKey.Checked;
+            m_sSearchKey = m_tbxSearchKey.Text;
+            m_sSearchValue = m_tbxSearchValue.Text;
+            m_bSearchForKey = m_chkbxSearchForKey.Checked;
+            m_bSearchForValue = m_chkbxSearchForValue.Checked;
+            m_bFullText = m_chkbxFullText.Checked;
             m_btnSearch.Enabled = false;
             m_results = new Dictionary<string, SearchResult>();
             m_crawler = new RBFCrawler(Search, startingNode, AdvanceProgress);
@@ -81,43 +133,17 @@ namespace RBFPlugin
             m_crawler.Start();
         }
 
-        void CrawlerOnFinished()
+        private void CrawlerOnFinished()
         {
             m_crawler.OnFinished -= CrawlerOnFinished;
             MethodInvoker done = CrawlerDone;
             Invoke(done);
         }
 
-        void CrawlerDone()
+        private void CrawlerDone()
         {
             m_lbxSearchResults.Visible = true;
             m_btnSearch.Enabled = true;
-        }
-
-        private void Search(AttributeStructure data, string pathInTree)
-        {
-            IEnumerable<AttributeValue> results;
-            if (m_bSearchForKey)
-                results = AttributeSearch.SearchForKey(data.Root, m_searchText, m_cbxFullText.Checked);
-            else
-                results = AttributeSearch.SearchForValue(data.Root, m_searchText, m_cbxFullText.Checked);
-
-            if (results.FirstOrDefault() == null)
-            {
-                return;
-            }
-            SearchResult tmp;
-            if (!m_results.TryGetValue(pathInTree, out tmp))
-            {
-                tmp = new SearchResult(pathInTree);
-                m_results.Add(pathInTree, tmp);
-            }
-            foreach (AttributeValue rbfv in results)
-            {
-                tmp.AddValue(rbfv);
-            }
-            MethodInvoker adder = () => m_lbxSearchResults.Items.Add(tmp);
-            Invoke(adder);
         }
 
         private void LbxSearchResultsSelectedIndexChanged(object sender, EventArgs e)
