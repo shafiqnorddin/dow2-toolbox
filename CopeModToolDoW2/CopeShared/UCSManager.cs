@@ -21,6 +21,7 @@ THE SOFTWARE.
  */
 
 using System;
+using System.Collections.Generic;
 using System.IO;
 using cope.DawnOfWar2;
 using cope.Helper;
@@ -88,6 +89,16 @@ namespace ModTool.Core
             return s_modUCS.ModifyString(index, text);
         }
 
+        public static void ModifyOrAddString(string text, uint index)
+        {
+            s_modUCS.ModifyOrAdd(index, text);
+        }
+
+        public static bool RemoveString(uint index)
+        {
+            return s_modUCS.RemoveString(index);
+        }
+
         public static void SaveUCS()
         {
             if (s_modUCS == null || s_modUCS.StringCount <= 0)
@@ -123,6 +134,11 @@ namespace ModTool.Core
             s_nextIndex = 0;
             LoadModUCS();
             LoggingManager.SendMessage("UCSManager - Finished reloading");
+        }
+
+        public static IEnumerable<KeyValuePair<uint, string>> GetStrings()
+        {
+            return s_modUCS;
         }
 
         static void LoadModUCS()
