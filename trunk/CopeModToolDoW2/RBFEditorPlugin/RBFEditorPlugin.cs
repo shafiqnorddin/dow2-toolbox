@@ -45,8 +45,11 @@ namespace RBFPlugin
             ToolStripItem openDictionaryCrawler = new ToolStripMenuItem("Open Dictionary Builder")
                                                       {Name = "dictCrawler"};
             openDictionaryCrawler.Click += OpenDictionaryCrawlerClick;
+            ToolStripItem openLibraryCrawler = new ToolStripMenuItem("Open Library Builder") {Name = "libraryCrawler"};
+            openLibraryCrawler.Click += OpenLibraryCrawlerClick;
             env.PluginSubMenu.Add(openRBFLib);
             env.PluginSubMenu.Add(openDictionaryCrawler);
+            env.PluginSubMenu.Add(openLibraryCrawler);
             env.PluginSubMenu.Add(options);
             env.PluginSubMenu.Add(search);
 
@@ -66,6 +69,12 @@ namespace RBFPlugin
         static void OpenRBFLibClick(object sender, EventArgs e)
         {
             RBFLibrary.ShowLibraryForm();
+        }
+
+        private static void OpenLibraryCrawlerClick(object sender, EventArgs e)
+        {
+            var libCrawler = new LibraryCrawlerForm();
+            libCrawler.ShowDialog();
         }
 
         static void OpenDictionaryCrawlerClick(object sender, EventArgs e)

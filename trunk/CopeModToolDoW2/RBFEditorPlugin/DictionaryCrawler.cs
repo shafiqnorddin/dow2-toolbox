@@ -48,6 +48,7 @@ namespace RBFPlugin
 
         private void OnCrawlerDone()
         {
+            m_crawler.OnFinished -= OnCrawlerDone;
             foreach (var entry in m_results.Values)
             {
                 entry.Options.Sort();

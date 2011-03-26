@@ -53,6 +53,7 @@ namespace RBFPlugin
         }
     }
 
+    // Todo: clean up!
     public static class RBFLibrary
     {
         static RBFLibraryEditor s_libraryForm;
@@ -263,6 +264,15 @@ namespace RBFPlugin
                 RemoveEntryFromTagGroup(entry, taggroup);
             if (EntryRemoved != null)
                 EntryRemoved(null, entry);
+        }
+
+        static public void RemoveEntry(string entryName)
+        {
+            RBFLibEntry entry;
+            if (s_values.TryGetValue(entryName, out entry))
+            {
+                RemoveEntry(entry);
+            }
         }
 
         static public SortedDictionary<string, RBFLibEntry> GetAllEntries()
@@ -549,9 +559,17 @@ namespace RBFPlugin
             writer.Flush();
         }
 
-        static public IEnumerable<string> GetTagGroups()
+        static public IEnumerable<string> GetTagGroupNames()
         {
             return s_tagGroups.Keys;
+        }
+
+        static public IEnumerable<string> GetTagGroup(string name)
+        {
+            string[] tags;
+            if (s_tagGroups.TryGetValue(name, out tags))
+                return tags;
+            return null;
         }
 
         static public void ShowLibraryForm()
