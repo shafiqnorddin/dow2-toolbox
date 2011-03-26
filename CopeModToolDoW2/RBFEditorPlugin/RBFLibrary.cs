@@ -572,6 +572,16 @@ namespace RBFPlugin
             return null;
         }
 
+        static public void AddTagsToGroup(string groupName, IEnumerable<string> tags)
+        {
+            string[] taggroup;
+            if (!s_tagGroups.TryGetValue(groupName, out taggroup))
+                taggroup = tags.ToArray();
+            else
+                taggroup.Append(tags.ToArray());
+            s_tagGroups[groupName] = taggroup;
+        }
+
         static public void ShowLibraryForm()
         {
             if (s_libraryForm == null || s_libraryForm.IsDisposed)

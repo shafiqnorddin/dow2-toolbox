@@ -21,14 +21,9 @@ THE SOFTWARE.
  */
 using System;
 using System.Collections.Generic;
-using System.Text;
-using System.Threading;
 using System.Windows.Forms;
-using cope.DawnOfWar2.RelicBinary;
 using cope.DawnOfWar2.RelicAttribute;
-using cope.IO;
 using cope.Helper;
-using System.Linq;
 using ModTool.Core;
 
 namespace RBFPlugin
