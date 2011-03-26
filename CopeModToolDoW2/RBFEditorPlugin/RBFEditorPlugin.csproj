@@ -101,6 +101,12 @@
     <Compile Include="DictionaryCrawler.Designer.cs">
       <DependentUpon>DictionaryCrawler.cs</DependentUpon>
     </Compile>
+    <Compile Include="LibraryCrawlerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LibraryCrawlerForm.Designer.cs">
+      <DependentUpon>LibraryCrawlerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -167,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DictionaryCrawler.resx">
       <DependentUpon>DictionaryCrawler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LibraryCrawlerForm.resx">
+      <DependentUpon>LibraryCrawlerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

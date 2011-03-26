@@ -44,7 +44,7 @@ namespace RBFPlugin
         /// <summary>
         /// This event is called when the RBFCrawler has done its work or is stopped.
         /// </summary>
-        public event Action OnFinished;
+        public event System.Action OnFinished;
 
         /// <summary>
         /// Creates a new RBFCrawler that call the specified delegate for every RBF and starts at a given directory.
@@ -83,6 +83,7 @@ namespace RBFPlugin
         /// <param name="foreachRBF">This delegate is called for every RBF.</param>
         /// <param name="startNode">The crawler will begin searching for RBF files from this node.</param>
         /// <param name="advanceProgressCallback">Called everytime a file has been processed.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="foreachRBF" /> is <c>null</c>.</exception>
         public RBFCrawler(CrawlerCallback foreachRBF, FSNodeDir startNode, Action advanceProgressCallback)
         {
             if (foreachRBF == null) throw new ArgumentNullException("foreachRBF");
@@ -96,6 +97,7 @@ namespace RBFPlugin
 
         /// <summary>
         /// Gets or sets whether this RBFCrawler should be running in its own thread.
+        /// Default is true.
         /// </summary>
         public bool UseDedicatedThread
         {

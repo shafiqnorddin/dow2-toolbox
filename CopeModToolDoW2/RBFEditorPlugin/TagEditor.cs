@@ -31,7 +31,7 @@ namespace RBFPlugin
         public TagEditor()
         {
             InitializeComponent();
-            m_chklbxTagGroups.Items.AddRange(RBFLibrary.GetTagGroups().ToArray());
+            m_chklbxTagGroups.Items.AddRange(RBFLibrary.GetTagGroupNames().ToArray());
         }
 
         private void BtnOkClick(object sender, EventArgs e)
@@ -66,7 +66,7 @@ namespace RBFPlugin
                     for (int i = 0; i < m_chklbxTagGroups.Items.Count; i++)
                     {
                         string item = m_chklbxTagGroups.Items[i] as string;
-                        m_chklbxTagGroups.SetItemChecked(i, value.ContainsEqual(item));
+                        m_chklbxTagGroups.SetItemChecked(i, value.Contains(item));
                     }
                 }
             }

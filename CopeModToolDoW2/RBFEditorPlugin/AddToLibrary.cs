@@ -35,7 +35,7 @@ namespace RBFPlugin
             InitializeComponent();
             m_chkbxAddTags.Checked = s_addTags;
 
-            m_chklbxTagGroups.Items.AddRange(RBFLibrary.GetTagGroups().ToArray());
+            m_chklbxTagGroups.Items.AddRange(RBFLibrary.GetTagGroupNames().ToArray());
         }
 
         public string ValueName
@@ -70,7 +70,7 @@ namespace RBFPlugin
                     for (int i = 0; i < m_chklbxTagGroups.Items.Count; i++)
                     {
                         string item = m_chklbxTagGroups.Items[i] as string;
-                        m_chklbxTagGroups.SetItemChecked(i, value.ContainsEqual(item));
+                        m_chklbxTagGroups.SetItemChecked(i, value.Contains(item));
                     }
                 }
             }
@@ -91,18 +91,18 @@ namespace RBFPlugin
         {
             if (m_tbxName.Text == string.Empty)
             {
-                 UIHelper.ShowError("The selected name is invalid!");
+                UIHelper.ShowError("The selected name is invalid!");
                 return;
             }
             if (m_rtbTags.Text == string.Empty)
             {
-                 UIHelper.ShowError("Please enter at least ONE tag.");
+                UIHelper.ShowError("Please enter at least ONE tag.");
                 return;
             }
 
             if (!s_addTags && RBFLibrary.GetAllEntries().ContainsKey(m_tbxName.Text))
             {
-                 UIHelper.ShowError("The selected name is already in use by another value.");
+                UIHelper.ShowError("The selected name is already in use by another value.");
                 return;
             }
             DialogResult = DialogResult.OK;
