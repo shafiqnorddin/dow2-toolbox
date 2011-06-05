@@ -21,6 +21,7 @@ THE SOFTWARE.
  */
 using System;
 using System.Windows.Forms;
+using cope.DawnOfWar2;
 using cope.DawnOfWar2.RelicBinary;
 using cope.Helper;
 using cope.IO;
@@ -80,6 +81,7 @@ namespace RBFPlugin
 
         #region methods
 
+        /// <exception cref="CopeDoW2Exception">Failed to load file as RBF! Visit the options and ensure that the settings correspond to the game version you're trying to modify.</exception>
         protected void LoadFile(UniFile file)
         {
             m_rbf = new RelicBinaryFile(file);
@@ -87,10 +89,20 @@ namespace RBFPlugin
             {
                 m_rbf.KeyProvider = ModManager.RBFKeyProvider;
                 m_rbf.UseKeyProvider = RBFSettings.UseKeyProviderForLoading;
-                m_rbf.ReadData();
+                try
+                {
+                    m_rbf.ReadData();
+                }
+                catch (Exception ex)
+                {
+                    throw new CopeDoW2Exception(ex,
+                                                "Failed to load file as RBF! Visit the plugin's options " +
+                                                "and ensure that the settings correspond to " +
+                                                "the game version you're trying to modify.");
+                }
             }
             file.Close();
-            _rbfEditorCore.Analyze(m_rbf.AttributeStructure.Root);
+            m_rbfEditorCore.Analyze(m_rbf.AttributeStructure.Root);
         }
 
         protected void SaveFile(string path)
@@ -147,11 +159,11 @@ namespace RBFPlugin
         {
             add
             {
-                _rbfEditorCore.KeyDown += value;
+                m_rbfEditorCore.KeyDown += value;
             }
             remove
             {
-                _rbfEditorCore.KeyDown -= value;
+                m_rbfEditorCore.KeyDown -= value;
             }
         }
 

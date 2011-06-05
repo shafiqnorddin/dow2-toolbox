@@ -50,7 +50,8 @@ namespace ModTool.Core.PlugIns.RelicChunky
             m_chunkHandler = new Dictionary<RelicChunk, BaseHandler>();
         }
 
-        /// <exception cref="CopeException">Can't open the file! Info: {0}</exception>
+
+        /// <exception cref="CopeException">Can't open the file as RelicChunky!</exception>
         public RelicChunkyViewer(UniFile file)
             : this()
         {
@@ -59,10 +60,9 @@ namespace ModTool.Core.PlugIns.RelicChunky
             {
                 rcf.ReadData();
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                file.Stream.Position = 0;
-                throw new CopeException("Can't open the file! Info: {0}", e.Message);
+                throw new CopeException(ex, "Can't open the file as RelicChunky!");
             }
             file.Close();
 

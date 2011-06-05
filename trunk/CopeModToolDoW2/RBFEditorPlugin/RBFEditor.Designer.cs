@@ -38,7 +38,7 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this._btn_openLibrary = new System.Windows.Forms.Button();
-            this._rbfEditorCore = new RBFPlugin.RBFEditorCore();
+            this.m_rbfEditorCore = new RBFPlugin.RBFEditorCore();
             this.pnlMainRBFEditor.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -61,7 +61,7 @@
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this._rbfEditorCore, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.m_rbfEditorCore, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -149,12 +149,12 @@
             //
             // _rbfEditorCore
             //
-            this._rbfEditorCore.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._rbfEditorCore.Location = new System.Drawing.Point(3, 3);
-            this._rbfEditorCore.Name = "_rbfEditorCore";
-            this._rbfEditorCore.Size = new System.Drawing.Size(920, 641);
-            this._rbfEditorCore.TabIndex = 3;
-            this._rbfEditorCore.HasChangesChanged += new cope.GenericHandler<bool>(this.RBFEditorCoreHasChangesChanged);
+            this.m_rbfEditorCore.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.m_rbfEditorCore.Location = new System.Drawing.Point(3, 3);
+            this.m_rbfEditorCore.Name = "m_rbfEditorCore";
+            this.m_rbfEditorCore.Size = new System.Drawing.Size(920, 641);
+            this.m_rbfEditorCore.TabIndex = 3;
+            this.m_rbfEditorCore.HasChangesChanged += new cope.GenericHandler<bool>(this.RBFEditorCoreHasChangesChanged);
             //
             // RBFEditor
             //
@@ -183,6 +183,6 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button _btn_openLibrary;
-        private RBFEditorCore _rbfEditorCore;
+        private RBFEditorCore m_rbfEditorCore;
     }
 }

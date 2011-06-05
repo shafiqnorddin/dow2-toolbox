@@ -74,6 +74,7 @@
             this.m_tbxBaseModule.Name = "m_tbxBaseModule";
             this.m_tbxBaseModule.Size = new System.Drawing.Size(473, 20);
             this.m_tbxBaseModule.TabIndex = 0;
+            this.m_tbxBaseModule.TextChanged += new System.EventHandler(this.TbxBaseModuleTextChanged);
             // 
             // _btn_baseModuleSearch
             // 
