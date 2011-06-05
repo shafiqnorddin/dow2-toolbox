@@ -131,5 +131,19 @@ namespace ModTool.FE
             DialogResult = DialogResult.Cancel;
             Close();
         }
+
+        private void TbxBaseModuleTextChanged(object sender, EventArgs e)
+        {
+            if (m_tbxBaseModule.Text.ToLowerInvariant().Contains("retribution"))
+            {
+                ToolSettings.IsInRetributionMode = true;
+                m_chkbxRepackAttrib.Enabled = true;
+            }
+            else
+            {
+                ToolSettings.IsInRetributionMode = false;
+                m_chkbxRepackAttrib.Enabled = false;
+            }
+        }
     }
 }

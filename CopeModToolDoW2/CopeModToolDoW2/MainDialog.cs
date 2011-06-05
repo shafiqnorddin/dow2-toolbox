@@ -870,7 +870,7 @@ namespace ModTool.FE
             try
             {
                 var filetool = FileManager.LoadFile(uniFile, forceText);
-                if (filetool.Parent != null && filetool.Parent is TabPage)
+                if (filetool != null && filetool.Parent != null && filetool.Parent is TabPage)
                 {
                     m_tbcApps.SelectedTab = filetool.Parent as TabPage;
                 }

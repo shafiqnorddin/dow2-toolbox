@@ -75,7 +75,6 @@ Global
 		{FF044EA1-3442-460F-99C0-113A5BF6880C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF044EA1-3442-460F-99C0-113A5BF6880C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FF044EA1-3442-460F-99C0-113A5BF6880C}.Release|x86.ActiveCfg = Release|x86
-		{FF044EA1-3442-460F-99C0-113A5BF6880C}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

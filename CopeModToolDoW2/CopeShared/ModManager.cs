@@ -95,10 +95,7 @@ namespace ModTool.Core
                     value += '\\';
                 s_sGameDir = value;
                 LoggingManager.SendMessage("ModManager - GameDirectory changed to " + value);
-                if (value.Contains("\\dawn of war ii - retribution\\"))
-                    ToolSettings.IsInRetributionMode = true;
-                else
-                    ToolSettings.IsInRetributionMode = false;
+                ToolSettings.IsInRetributionMode = value.ToLowerInvariant().Contains("retribution");
                 if (GameDirectoryChanged != null)
                     GameDirectoryChanged();
             }

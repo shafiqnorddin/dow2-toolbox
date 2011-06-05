@@ -34,7 +34,6 @@ namespace ModTool.Core
 {
     public delegate void FileLoadedEventHandler(UniFile file, FileTool plugin);
 
-    // Todo: keep track of all open files and prevent opening files twice if option is set
     static public class FileManager
     {
         #region fields
@@ -82,11 +81,15 @@ namespace ModTool.Core
                 return s_openTools[file.FilePath];
 
             FileTool tmp;
+            byte[] stream = file.ConsumeStream();
+            UniFile filecopy = new UniFile(stream);
+            filecopy.FilePath = file.FilePath;
+
             if (forceText)
             {
                 try
                 {
-                    tmp = new TextEditor(file);
+                    tmp = new TextEditor(filecopy);
                 }
                 catch (Exception e)
                 {
@@ -94,22 +97,26 @@ namespace ModTool.Core
                     return null;
                 }
             }
-            else if (FileTypeManager.FileTypes.ContainsKey(file.FileExtension))
-                tmp = FileTypeManager.LaunchFromExt(file.FileName, file);
+            else if (FileTypeManager.FileTypes.ContainsKey(filecopy.FileExtension))
+                tmp = FileTypeManager.LaunchFromExt(filecopy.FileName, filecopy);
             else
             {
                 try
                 {
-                    tmp = new RelicChunkyViewer(file);
+                    tmp = new RelicChunkyViewer(filecopy);
                 }
                 catch
                 {
                     try
                     {
-                        tmp = new TextEditor(file);
+                        filecopy = new UniFile(stream);
+                        file.Stream.Position = 0;
+                        tmp = new TextEditor(filecopy);
                     }
-                    catch
+                    catch(Exception ex)
                     {
+                        LoggingManager.SendError("Failed to open file");
+                        LoggingManager.HandleException(ex);
                         file.Close();
                         UIHelper.ShowError("Can't open the selected file " + file.FileName + ", no suitable plugin found!");
                         return null;
