@@ -151,7 +151,7 @@ namespace RBFPlugin
 
         public override string[] FileExtensions
         {
-            get { return new[] { "rbf"}; }
+            get { return new[] { "rbf", "attr_pc"}; }
         }
 
         public override FileTool LoadFile(cope.IO.UniFile file)
@@ -171,7 +171,7 @@ namespace RBFPlugin
 
         public override string Version
         {
-            get { return "1.99"; }
+            get { return "1.991"; }
         }
 
         #endregion plugin

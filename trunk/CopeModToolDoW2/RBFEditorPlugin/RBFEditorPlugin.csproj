@@ -72,6 +72,9 @@
     <Reference Include="cope.DawnOfWar2, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
       <HintPath>..\..\copeFrameWork\cope.DawnOfWar2\bin\x86\Release\cope.DawnOfWar2.dll</HintPath>
     </Reference>
+    <Reference Include="cope.SpaceMarine">
+      <HintPath>..\..\copeFrameWork\cope.SpaceMarine\bin\x86\Release\cope.SpaceMarine.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
