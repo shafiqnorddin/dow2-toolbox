@@ -473,7 +473,7 @@ namespace RBFPlugin
                         else if (reader.Name == "Values")
                         {
                             reader.Read();
-                            values = AttributeXmlReader.ReadData(reader);
+                            values = AttributeXmlReader.ReadData(reader, null);
                             reader.ReadEndElement();
                         }
                         else reader.Read();

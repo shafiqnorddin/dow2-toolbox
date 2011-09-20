@@ -25,6 +25,7 @@ using cope.DawnOfWar2;
 using cope.DawnOfWar2.RelicBinary;
 using cope.Helper;
 using cope.IO;
+using cope.SpaceMarine.BAF;
 using ModTool.Core;
 using ModTool.Core.PlugIns;
 
@@ -74,7 +75,15 @@ namespace RBFPlugin
         public override void SaveFile()
         {
             if (m_rbf.FileExtension == "rbf")
-                SaveFile(m_rbf.FilePath);
+                SaveFileRBF(m_rbf.FilePath);
+            else if (m_rbf.FileExtension == "attr_pc")
+                SaveFileBAF(m_rbf.FilePath);
+            else
+                return;
+
+            var e = new FileActionEventArgs(FileActionType.Save, m_rbf);
+            InvokeOnSaved(this, e);
+            HasChanges = false;
         }
 
         #endregion
@@ -84,11 +93,13 @@ namespace RBFPlugin
         /// <exception cref="CopeDoW2Exception">Failed to load file as RBF! Visit the options and ensure that the settings correspond to the game version you're trying to modify.</exception>
         protected void LoadFile(UniFile file)
         {
-            m_rbf = new RelicBinaryFile(file);
             if (file.FileExtension == "rbf")
             {
-                m_rbf.KeyProvider = ModManager.RBFKeyProvider;
-                m_rbf.UseKeyProvider = RBFSettings.UseKeyProviderForLoading;
+                m_rbf = new RelicBinaryFile(file)
+                            {
+                                KeyProvider = ModManager.RBFKeyProvider,
+                                UseKeyProvider = RBFSettings.UseKeyProviderForLoading
+                            };
                 try
                 {
                     m_rbf.ReadData();
@@ -101,11 +112,33 @@ namespace RBFPlugin
                                                 "the game version you're trying to modify.");
                 }
             }
+            else if (file.FileExtension == "attr_pc")
+            {
+                try
+                {
+                    var attribStruct = BAFReader.Read(file.Stream);
+                    file.Close();
+                    m_rbf = new RelicBinaryFile(attribStruct) {FilePath = file.FilePath, UseKeyProvider = false};
+                }
+                catch (Exception ex)
+                {
+                    throw new CopeDoW2Exception(ex, "Failed to load file as attr_pc!");
+                }
+            }
             file.Close();
             m_rbfEditorCore.Analyze(m_rbf.AttributeStructure.Root);
         }
 
-        protected void SaveFile(string path)
+        protected void SaveFileBAF(string path)
+        {
+            var fs = System.IO.File.Open(path, System.IO.FileMode.OpenOrCreate, System.IO.FileAccess.ReadWrite,
+                                             System.IO.FileShare.Read);
+            BAFWriter.Write(fs, m_rbf.AttributeStructure);
+            fs.Close();
+            fs.Dispose();
+        }
+
+        protected void SaveFileRBF(string path)
         {
             m_rbf.KeyProvider = ModManager.RBFKeyProvider;
             m_rbf.UseKeyProvider = RBFSettings.UseKeyProviderForSaving;
@@ -113,9 +146,6 @@ namespace RBFPlugin
             m_rbf.FilePath = path;
             if (ModManager.RBFKeyProvider.NeedsUpdate())
                 ModManager.RBFKeyProvider.Update();
-            var e = new FileActionEventArgs(FileActionType.Save, m_rbf);
-            InvokeOnSaved(this, e);
-            HasChanges = false;
         }
 
         #endregion methods
@@ -124,7 +154,8 @@ namespace RBFPlugin
 
         private void BtnSaveRBFClick(object sender, EventArgs e)
         {
-            SaveFile(m_rbf.FilePath.SubstringBeforeLast('.', true) + "rbf");
+            SaveFile();
+            //SaveFileRBF(m_rbf.FilePath.SubstringBeforeLast('.', true) + "rbf");
 
             if (RBFSettings.AutoReloadInTestMode && DebugManager.HasClient && ModManager.IsModLoaded)
             {
@@ -141,7 +172,7 @@ namespace RBFPlugin
             }
         }
 
-        private static void BtnOpenLibraryClick(object sender, EventArgs e)
+        private void BtnOpenLibraryClick(object sender, EventArgs e)
         {
             RBFLibrary.ShowLibraryForm();
         }
