@@ -23,8 +23,9 @@ using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
-using cope.Helper;
-using cope.IO;
+using cope;
+using cope.DawnOfWar2;
+using cope.Extensions;
 using FreeImageAPI;
 using ModTool.Core.PlugIns;
 

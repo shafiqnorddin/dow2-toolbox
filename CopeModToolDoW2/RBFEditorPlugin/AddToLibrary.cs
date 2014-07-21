@@ -22,6 +22,7 @@ THE SOFTWARE.
 using System;
 using System.Windows.Forms;
 using System.Linq;
+using cope;
 using cope.Helper;
 
 namespace RBFPlugin

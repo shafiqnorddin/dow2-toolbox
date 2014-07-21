@@ -23,9 +23,10 @@ using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using cope;
 using cope.DawnOfWar2.SGA;
-using cope.Helper;
-using cope.IO;
+using cope.Extensions;
+using cope.DawnOfWar2;
 
 namespace ModTool.Core
 {

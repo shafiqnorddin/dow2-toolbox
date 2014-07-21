@@ -21,6 +21,7 @@ THE SOFTWARE.
  */
 using System;
 using System.Threading;
+using cope.DawnOfWar2;
 using cope.DawnOfWar2.RelicAttribute;
 using cope.DawnOfWar2.RelicBinary;
 using cope.IO;

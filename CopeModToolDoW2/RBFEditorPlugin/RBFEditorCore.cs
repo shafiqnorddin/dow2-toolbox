@@ -1,4 +1,4 @@
-﻿/*
+/*
 Copyright (c) 2011 Sebastian Schoener
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -27,10 +27,11 @@ using System.Text;
 using System.Windows.Forms;
 using cope;
 using cope.DawnOfWar2.RelicAttribute;
-using cope.Helper;
+using cope.Extensions;
 using cope.IO;
 using cope.UI;
 using ModTool.Core;
+using cope.DawnOfWar2;
 
 namespace RBFPlugin
 {

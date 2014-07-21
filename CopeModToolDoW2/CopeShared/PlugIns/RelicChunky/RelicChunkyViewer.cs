@@ -25,7 +25,7 @@ using System.Windows.Forms;
 using cope;
 using cope.DawnOfWar2.RelicChunky;
 using cope.DawnOfWar2.RelicChunky.Chunks;
-using cope.IO;
+using cope.DawnOfWar2;
 
 namespace ModTool.Core.PlugIns.RelicChunky
 {

@@ -24,7 +24,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using cope.DawnOfWar2;
-using cope.Helper;
+using cope;
 
 namespace ModTool.Core
 {
@@ -143,9 +143,10 @@ namespace ModTool.Core
 
         static void LoadModUCS()
         {
-            LoggingManager.SendMessage(File.Exists(ModUCSPath)
-                                           ? "UCSManager - UCS file for current mod found."
-                                           : "UCSManager - UCS file for current mod not found, will create a new one.");
+            LoggingManager.SendMessage(
+                "UCSManager - UCS file for current mod " + (File.Exists(ModUCSPath)
+                                                                ? "found."
+                                                                : "not found, will create a new one."));
             FileStream ucs = null;
             try
             {

@@ -54,6 +54,9 @@
     <Reference Include="cope">
       <HintPath>..\..\copeFrameWork\cope\bin\x86\Release\cope.dll</HintPath>
     </Reference>
+    <Reference Include="cope.DawnOfWar2, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <HintPath>..\..\copeFrameWork\cope.DawnOfWar2\bin\x86\Release\cope.DawnOfWar2.dll</HintPath>
+    </Reference>
     <Reference Include="ICSharpCode.AvalonEdit">
       <HintPath>..\..\..\Libraries\C#\AvalonEdit\ICSharpCode.AvalonEdit.dll</HintPath>
     </Reference>

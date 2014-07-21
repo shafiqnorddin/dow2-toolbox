@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 using cope;
-using cope.IO;
+using cope.DawnOfWar2;
 
 namespace ModTool.Core.PlugIns
 {

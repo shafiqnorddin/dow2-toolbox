@@ -26,6 +26,7 @@ using System.Windows.Forms;
 using cope;
 using cope.DawnOfWar2;
 using cope.DawnOfWar2.SGA;
+using cope.Extensions;
 using cope.Helper;
 using ModTool.Core;
 

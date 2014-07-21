@@ -163,8 +163,8 @@ namespace ModTool.FE
             // openSGAStripMenuItem1
             // 
             this.openSGAStripMenuItem1.Name = "openSGAStripMenuItem1";
-            this.openSGAStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
-                        | System.Windows.Forms.Keys.O)));
+            this.openSGAStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.O)));
             this.openSGAStripMenuItem1.Size = new System.Drawing.Size(204, 22);
             this.openSGAStripMenuItem1.Text = "Open SGA";
             this.openSGAStripMenuItem1.Click += new System.EventHandler(this.OpenSGAStripMenuItem1Click);
@@ -408,8 +408,8 @@ namespace ModTool.FE
             // createFolderToolStripMenuItem
             // 
             this.createFolderToolStripMenuItem.Name = "createFolderToolStripMenuItem";
-            this.createFolderToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
-                        | System.Windows.Forms.Keys.N)));
+            this.createFolderToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.N)));
             this.createFolderToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
             this.createFolderToolStripMenuItem.Text = "Create Folder";
             this.createFolderToolStripMenuItem.Click += new System.EventHandler(this.CreateFolderToolStripMenuItemCombinedClick);
@@ -417,6 +417,7 @@ namespace ModTool.FE
             // createCopyToolStripMenuItemCombined
             // 
             this.createCopyToolStripMenuItemCombined.Name = "createCopyToolStripMenuItemCombined";
+            this.createCopyToolStripMenuItemCombined.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
             this.createCopyToolStripMenuItemCombined.Size = new System.Drawing.Size(222, 22);
             this.createCopyToolStripMenuItemCombined.Text = "Create Copy";
             this.createCopyToolStripMenuItemCombined.Click += new System.EventHandler(this.CreateCopyToolStripMenuItemCombinedClick);
@@ -439,8 +440,8 @@ namespace ModTool.FE
             // copyRelativePathToolStripMenuItem_combined
             // 
             this.copyRelativePathToolStripMenuItem_combined.Name = "copyRelativePathToolStripMenuItem_combined";
-            this.copyRelativePathToolStripMenuItem_combined.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
-                        | System.Windows.Forms.Keys.C)));
+            this.copyRelativePathToolStripMenuItem_combined.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.C)));
             this.copyRelativePathToolStripMenuItem_combined.Size = new System.Drawing.Size(222, 22);
             this.copyRelativePathToolStripMenuItem_combined.Text = "Copy Relative Path";
             this.copyRelativePathToolStripMenuItem_combined.Click += new System.EventHandler(this.CopyRelativePathToolStripMenuItemCombinedClick);
@@ -553,8 +554,8 @@ namespace ModTool.FE
             // copyRelativePathToolStripMenuItem_virtual
             // 
             this.copyRelativePathToolStripMenuItem_virtual.Name = "copyRelativePathToolStripMenuItem_virtual";
-            this.copyRelativePathToolStripMenuItem_virtual.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
-                        | System.Windows.Forms.Keys.C)));
+            this.copyRelativePathToolStripMenuItem_virtual.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.C)));
             this.copyRelativePathToolStripMenuItem_virtual.Size = new System.Drawing.Size(222, 22);
             this.copyRelativePathToolStripMenuItem_virtual.Text = "Copy Relative Path";
             this.copyRelativePathToolStripMenuItem_virtual.Click += new System.EventHandler(this.CopyRelativePathToolStripMenuItemVirtualClick);

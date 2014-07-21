@@ -24,8 +24,8 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Text;
 using cope;
-using cope.Helper;
-using cope.IO;
+using cope.Extensions;
+using cope.DawnOfWar2;
 using ModTool.Core.PlugIns;
 
 namespace ModTool.Core

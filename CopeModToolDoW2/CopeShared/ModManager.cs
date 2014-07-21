@@ -28,8 +28,7 @@ using cope;
 using cope.DawnOfWar2;
 using cope.DawnOfWar2.RelicBinary;
 using cope.DawnOfWar2.SGA;
-using cope.Helper;
-using cope.IO;
+using cope.Extensions;
 
 namespace ModTool.Core
 {

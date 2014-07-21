@@ -21,7 +21,7 @@ THE SOFTWARE.
  */
 using System;
 using System.IO;
-using cope.Helper;
+using cope;
 using cope.IO;
 using ModTool.Core.PlugIns;
 
@@ -32,19 +32,22 @@ namespace ModTool.Core
     /// </summary>
     static public class ConfigManager
     {
-        private static XmlConfigFile s_pluginsConfig;
+        private static XmlConfig s_pluginsConfig;
+        private static string s_sConfigFilePath;
 
         static public bool SetupConfigSystem(string configFilePath)
         {
             ModManager.ApplicationExit += ModManagerApplicationExit;
             LoggingManager.SendMessage("ConfigManager - Setting up config system...");
             if (!File.Exists(configFilePath))
-            {
                 LoggingManager.SendMessage("ConfingManager - No plugins.config found, creating one from scratch");
-            }
+
+            s_sConfigFilePath = configFilePath;
+            FileStream config = null;
             try
             {
-                s_pluginsConfig = new XmlConfigFile(configFilePath);
+                config = File.Open(configFilePath, FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
+                s_pluginsConfig = XmlConfigReader.Read(config);
             }
             catch (Exception e)
             {
@@ -52,22 +55,38 @@ namespace ModTool.Core
                 LoggingManager.HandleException(e);
                 return false;
             }
+            finally
+            {
+                if (config != null)
+                    config.Close();
+            }
             LoggingManager.SendMessage("ConfigManager - Config system set up successfully!");
             return true;
         }
 
         static void ModManagerApplicationExit()
         {
+            FileStream configFile = null;
             try
             {
                 if (s_pluginsConfig != null)
-                    s_pluginsConfig.WriteDataTo(s_pluginsConfig.FilePath);
+                {
+                    configFile = File.Open(s_sConfigFilePath, FileMode.OpenOrCreate, FileAccess.Write,
+                                                      FileShare.Read);
+                    XmlConfigWriter.Write(s_pluginsConfig, configFile);
+                    configFile.Flush();
+                }
             }
             catch (Exception ex)
             {
                 LoggingManager.SendMessage("ConfigManager - Could not write config file");
                 LoggingManager.HandleException(ex);
                 UIHelper.ShowError("Failed to save configuration file. See Log file for more information.");
+            }
+            finally
+            {
+                if (configFile != null)
+                    configFile.Close();
             }
         }
 

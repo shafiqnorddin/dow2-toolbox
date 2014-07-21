@@ -24,15 +24,46 @@ using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 using cope;
+using cope.DawnOfWar2;
 using cope.IO;
-using cope.Helper;
+using cope.Extensions;
 using ModTool.Core.PlugIns;
 using ModTool.Core.PlugIns.RelicChunky;
 using ModTool.Core.PlugIns.Text;
 
 namespace ModTool.Core
 {
+    public enum FileActionType
+    {
+        Save,
+    }
+    public class FileActionEventArgs
+    {
+        public FileActionEventArgs(FileActionType action, UniFile file, object tag = null)
+        {
+            Action = action;
+            File = file;
+            Tag = tag;
+        }
+
+        public object Tag
+        {
+            get;
+            private set;
+        }
+
+        public UniFile File
+        {
+            get;
+            private set;
+        }
+
+        public FileActionType Action { get; private set; }
+    }
+
     public delegate void FileLoadedEventHandler(UniFile file, FileTool plugin);
+
+    public delegate void FileActionEventHandler(object sender, FileActionEventArgs e);
 
     static public class FileManager
     {

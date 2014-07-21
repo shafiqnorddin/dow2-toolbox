@@ -26,7 +26,7 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using cope;
-using cope.Helper;
+using cope.Extensions;
 
 namespace ModTool.Core
 {

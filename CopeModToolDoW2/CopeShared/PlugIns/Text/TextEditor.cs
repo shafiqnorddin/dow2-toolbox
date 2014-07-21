@@ -21,8 +21,8 @@ THE SOFTWARE.
  */
 using System;
 using System.IO;
-using cope.Helper;
-using cope.IO;
+using cope.Extensions;
+using cope.DawnOfWar2;
 
 namespace ModTool.Core.PlugIns.Text
 {
@@ -46,9 +46,9 @@ namespace ModTool.Core.PlugIns.Text
         {
             m_file = file;
             var r = new StreamReader(file.Stream, true);
-            _rtb_text.Text = r.ReadToEnd();
+            m_rtbText.Text = r.ReadToEnd();
             r.Close();
-            _rtb_text.TextChanged += RtbTextTextChanged;
+            m_rtbText.TextChanged += RtbTextTextChanged;
         }
 
         #endregion ctors
@@ -62,7 +62,7 @@ namespace ModTool.Core.PlugIns.Text
                 Directory.CreateDirectory(dir);
             FileStream fs = System.IO.File.Create(m_file.FilePath);
             var w = new StreamWriter(fs);
-            w.Write(_rtb_text.Text);
+            w.Write(m_rtbText.Text);
             w.Close();
             fs.Close();
             HasChanges = false;

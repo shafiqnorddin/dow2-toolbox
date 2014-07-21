@@ -21,7 +21,7 @@ THE SOFTWARE.
  */
 using System;
 using System.Windows.Forms;
-using cope.Helper;
+using cope;
 using ModTool.Core;
 using ModTool.FE.Properties;
 

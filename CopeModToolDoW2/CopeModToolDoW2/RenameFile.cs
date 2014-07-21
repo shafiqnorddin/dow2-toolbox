@@ -21,7 +21,8 @@ THE SOFTWARE.
  */
 using System;
 using System.Windows.Forms;
-using cope.Helper;
+using cope;
+using cope.Extensions;
 
 namespace ModTool.FE
 {

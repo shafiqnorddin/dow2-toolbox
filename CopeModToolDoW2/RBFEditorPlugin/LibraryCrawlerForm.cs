@@ -23,7 +23,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using cope;
 using cope.DawnOfWar2.RelicAttribute;
+using cope.Extensions;
 using cope.Helper;
 using ModTool.Core;
 

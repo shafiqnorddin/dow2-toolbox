@@ -21,6 +21,7 @@ THE SOFTWARE.
  */
 using System;
 using System.Windows.Forms;
+using cope.DawnOfWar2;
 using ModTool.Core;
 using ModTool.Core.PlugIns;
 
@@ -154,7 +155,7 @@ namespace RBFPlugin
             get { return new[] { "rbf", "attr_pc"}; }
         }
 
-        public override FileTool LoadFile(cope.IO.UniFile file)
+        public override FileTool LoadFile(UniFile file)
         {
             return new RBFEditor(file);
         }
