@@ -23,7 +23,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using cope.FOB;
-using cope.Helper;
+using cope.Extensions;
 
 namespace ModDebug
 {

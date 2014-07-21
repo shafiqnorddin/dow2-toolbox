@@ -73,15 +73,13 @@
       <HintPath>..\3rd\Be.Windows.Forms.HexBox.dll</HintPath>
     </Reference>
     <Reference Include="cope, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\copeFrameWork\cope\bin\x86\Release\cope.dll</HintPath>
+      <HintPath>..\..\..\..\VisualStudio\copeFrameWork\cope\bin\x86\Release\cope.dll</HintPath>
     </Reference>
-    <Reference Include="cope.DawnOfWar2, Version=1.0.4064.35951, Culture=neutral, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\copeFrameWork\cope.DawnOfWar2\bin\x86\Release\cope.DawnOfWar2.dll</HintPath>
+    <Reference Include="cope.DawnOfWar2, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <HintPath>..\..\..\..\VisualStudio\copeFrameWork\cope.DawnOfWar2\bin\x86\Release\cope.DawnOfWar2.dll</HintPath>
     </Reference>
-    <Reference Include="cope.Debug">
-      <HintPath>..\..\copeFrameWork\cope.Debug\bin\x86\Release\cope.Debug.dll</HintPath>
+    <Reference Include="cope.Debug, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <HintPath>..\..\..\..\VisualStudio\copeFrameWork\cope.Debug\bin\x86\Release\cope.Debug.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />

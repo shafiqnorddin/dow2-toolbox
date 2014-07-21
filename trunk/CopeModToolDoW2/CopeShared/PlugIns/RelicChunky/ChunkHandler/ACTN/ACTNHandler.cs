@@ -22,9 +22,10 @@ THE SOFTWARE.
 using System;
 using System.IO;
 using System.Windows.Forms;
+using cope;
 using cope.DawnOfWar2.RelicChunky;
 using cope.DawnOfWar2.RelicChunky.Chunks;
-using cope.Helper;
+using cope.Extensions;
 
 namespace ModTool.Core.PlugIns.RelicChunky
 {

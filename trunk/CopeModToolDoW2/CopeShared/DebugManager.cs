@@ -24,8 +24,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Threading;
+using cope;
 using cope.Debug;
-using cope.Helper;
 
 namespace ModTool.Core
 {
@@ -164,7 +164,7 @@ namespace ModTool.Core
             {
                 LoggingManager.SendMessage("DebugManager - Injecting FOB failed!");
                 LoggingManager.HandleException(e);
-                 UIHelper.ShowError("Failed to start debugging system, please try again");
+                UIHelper.ShowError("Failed to start debugging system, please try again");
                 return;
             }
             string currentDir = Directory.GetCurrentDirectory() + '\\';
@@ -179,7 +179,7 @@ namespace ModTool.Core
             {
                 LoggingManager.SendMessage("DebugManager - Initializtaion of remote DebugManager failed!");
                 LoggingManager.HandleException(e);
-                 UIHelper.ShowError("Initialization of the remote DebugManager failed!");
+                UIHelper.ShowError("Initialization of the remote DebugManager failed!");
                 return;
             }
             LogMessage("Setup done!");

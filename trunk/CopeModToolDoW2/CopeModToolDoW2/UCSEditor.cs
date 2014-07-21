@@ -79,6 +79,13 @@ namespace ModTool.FE
             m_dgvStrings.Rows.Add(row);
         }
 
+        public void UnregisterEvents()
+        {
+            UCSManager.StringAdded -= OnStringAdded;
+            UCSManager.StringModified -= OnStringModified;
+            UCSManager.StringRemoved -= OnStringRemoved;
+        }
+
         #region eventhandlers
 
         private void OnLoad(object sender, EventArgs e)

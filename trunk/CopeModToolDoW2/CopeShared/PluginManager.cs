@@ -25,7 +25,8 @@ using System.Collections.Specialized;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
-using cope.Helper;
+using cope.Extensions;
+using cope;
 using ModTool.Core.PlugIns;
 
 namespace ModTool.Core

@@ -23,8 +23,8 @@ using System;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
+using cope;
 using ModTool.Core;
-using cope.Helper;
 
 namespace ModTool.FE
 {
@@ -81,7 +81,8 @@ namespace ModTool.FE
                     LoggingManager.SendWarning("Could neither find Retribution nor DoW2 directory; searched for " +
                                                steamPath + GameConstants.RETRIBUTION_PATH_FROM_STEAM + " and " +
                                                steamPath + GameConstants.DOW2_PATH_FROM_STEAM);
-                    AppEnd("Could neither find DoW2 nor Retribution");
+                    //AppEnd("Could neither find DoW2 nor Retribution");
+                    lastPath = steamPath;
                 }
             }
             ModManager.GameDirectory = lastPath;
@@ -183,7 +184,7 @@ namespace ModTool.FE
             else
                 LoggingManager.SendMessage("Application exited - no reason given");
                
-             UIHelper.ShowError("Application exited, see logfile for more information.");
+            UIHelper.ShowError("Application exited, see logfile for more information.");
             Application.Exit();
         }
 

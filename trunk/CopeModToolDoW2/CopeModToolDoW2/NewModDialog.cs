@@ -22,7 +22,8 @@ THE SOFTWARE.
 using System;
 using System.IO;
 using System.Windows.Forms;
-using cope.Helper;
+using cope;
+using cope.Extensions;
 using ModTool.Core;
 
 namespace ModTool.FE

@@ -36,5 +36,10 @@ namespace ModTool.FE
         {
             Close();
         }
+
+        private void OnFormClosing(object sender, FormClosingEventArgs e)
+        {
+            m_ucsEditor.UnregisterEvents();
+        }
     }
 }

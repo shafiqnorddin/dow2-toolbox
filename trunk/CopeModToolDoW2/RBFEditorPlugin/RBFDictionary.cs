@@ -25,7 +25,8 @@ using System.IO;
 using System.Linq;
 using System.Xml;
 using System.Xml.Serialization;
-using cope.Helper;
+using cope;
+using cope.Extensions;
 using ModTool.Core;
 
 namespace RBFPlugin

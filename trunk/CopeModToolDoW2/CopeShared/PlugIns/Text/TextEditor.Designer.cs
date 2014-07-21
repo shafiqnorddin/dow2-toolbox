@@ -31,7 +31,7 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this._btn_save = new System.Windows.Forms.Button();
-            this._rtb_text = new System.Windows.Forms.RichTextBox();
+            this.m_rtbText = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -42,7 +42,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 81F));
             this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this._rtb_text, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.m_rtbText, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -74,16 +74,16 @@
             //
             // _rtb_text
             //
-            this._rtb_text.AcceptsTab = true;
-            this._rtb_text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tableLayoutPanel1.SetColumnSpan(this._rtb_text, 2);
-            this._rtb_text.DetectUrls = false;
-            this._rtb_text.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._rtb_text.Location = new System.Drawing.Point(3, 3);
-            this._rtb_text.Name = "_rtb_text";
-            this._rtb_text.Size = new System.Drawing.Size(715, 616);
-            this._rtb_text.TabIndex = 1;
-            this._rtb_text.Text = "";
+            this.m_rtbText.AcceptsTab = true;
+            this.m_rtbText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tableLayoutPanel1.SetColumnSpan(this.m_rtbText, 2);
+            this.m_rtbText.DetectUrls = false;
+            this.m_rtbText.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.m_rtbText.Location = new System.Drawing.Point(3, 3);
+            this.m_rtbText.Name = "m_rtbText";
+            this.m_rtbText.Size = new System.Drawing.Size(715, 616);
+            this.m_rtbText.TabIndex = 1;
+            this.m_rtbText.Text = "";
             //
             // TextEditor
             //
@@ -102,6 +102,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button _btn_save;
-        private System.Windows.Forms.RichTextBox _rtb_text;
+        private System.Windows.Forms.RichTextBox m_rtbText;
     }
 }

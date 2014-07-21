@@ -21,10 +21,12 @@ THE SOFTWARE.
  */
 using System;
 using System.IO;
+using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
-using cope.Helper;
-using cope.IO;
+using cope;
+using cope.DawnOfWar2;
+using cope.Extensions;
 using ModTool.Core;
 using ModTool.Core.PlugIns;
 using ModTool.FE.Properties;
@@ -744,6 +746,20 @@ namespace ModTool.FE
             try
             {
                 string dirPath = into.Path + '\\';
+
+                if (File.Exists(dirPath + newName))
+                {
+                    string name = newName.SubstringBeforeLast('.');
+                    string ext = newName.SubstringAfterLast('.', true);
+                    int numOfThatKind = into.Directories.Count(d => d.Name.StartsWith(name + "_copy"));
+                    numOfThatKind += into.Files.Count(d => d.Name.StartsWith(name + "_copy"));
+                    if (numOfThatKind > 0)
+                        PasteNode(node, into, name + "_copy_" + (numOfThatKind + 1) + ext);
+                    else
+                        PasteNode(node, into, name + "_copy" + ext);
+                    return;
+                }
+
                 if (node is FSNodeVirtualFile)
                 {
                     var virtualFile = node as FSNodeVirtualFile;

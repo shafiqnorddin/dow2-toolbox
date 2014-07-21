@@ -24,9 +24,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Threading;
 using System.Windows.Forms;
+using cope;
 using Microsoft.Win32;
 using ModTool.Core;
-using cope.Helper;
 
 namespace ModTool.FE
 {

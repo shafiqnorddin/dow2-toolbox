@@ -24,7 +24,8 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using System;
-using cope.Helper;
+using cope.Extensions;
+using cope;
 
 namespace ModTool.Core
 {
@@ -185,13 +186,27 @@ namespace ModTool.Core
             if (m_trvFileTreeView.SelectedNode == null)
                 return;
             FSNode selected = GetFSNodeByTreeNode(m_trvFileTreeView.SelectedNode);
-            if (selected == null || selected is FSNodeDir || (selected is FSNodeVirtualFile && !(selected as FSNodeVirtualFile).HasLocal))
+            if (selected == null || (selected is FSNodeVirtualFile && !(selected as FSNodeVirtualFile).HasLocal))
                 return;
             string path = selected.Path;
+            string newPath = path.SubstringBeforeLast('\\', true) + newName;
+            if (File.Exists(newPath) || Directory.Exists(newPath))
+            {
+                UIHelper.ShowError("There already is an element with the specified name.");
+                return;
+            }
+            if (selected is FSNodeDir)
+            {
+                if (Directory.Exists(path))
+                    Directory.Move(path, newPath);
+                else
+                    Directory.CreateDirectory(newPath);
+                return;
+            }
+            
             try
             {
-                File.Copy(path, path.SubstringBeforeLast('\\', true) + newName);
-                File.Delete(path);
+                File.Move(path, newPath);
             }
             catch (Exception ex)
             {

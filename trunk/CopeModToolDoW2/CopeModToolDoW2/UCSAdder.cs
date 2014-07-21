@@ -22,6 +22,7 @@ THE SOFTWARE.
 using System;
 using System.Linq;
 using System.Windows.Forms;
+using cope;
 using cope.Helper;
 using ModTool.Core;
 using ModTool.FE.Properties;

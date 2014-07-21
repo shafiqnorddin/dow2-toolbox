@@ -20,8 +20,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
  */
 using System.IO;
-using cope.Helper;
-using cope.IO;
+using cope.DawnOfWar2;
 using ICSharpCode.AvalonEdit.Highlighting;
 using ModTool.Core.PlugIns;
 using ICSharpCode.AvalonEdit;

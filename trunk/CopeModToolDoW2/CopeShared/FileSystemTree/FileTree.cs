@@ -26,7 +26,7 @@ using System.Threading;
 using System.Windows.Forms;
 using cope.ADT;
 using cope.DawnOfWar2.SGA;
-using cope.Helper;
+using cope.Extensions;
 
 namespace ModTool.Core
 {

@@ -23,7 +23,7 @@ using System;
 using System.Diagnostics;
 using System.IO;
 using cope;
-using cope.Helper;
+using cope.Extensions;
 using CopeShared.Properties;
 
 namespace ModTool.Core
@@ -38,11 +38,16 @@ namespace ModTool.Core
             TocName = tocName;
             InputDirectory = inputFilePath;
             Regex = regex;
+            ArchiveAlias = tocName;
         }
 
         public ArchivePacker(string archiveName, string inputDirectory, string regex, bool isAttrib)
             : this(archiveName, isAttrib ? "ATTRIB" : "DATA", inputDirectory, regex)
         {
+            if (isAttrib)
+                ArchiveAlias = "Attributes";
+            else
+                ArchiveAlias = "Data";
         }
 
         public ArchivePacker(string archiveName, string inputDirectory, bool isAttrib)
@@ -101,7 +106,7 @@ namespace ModTool.Core
             try
             {
                 StreamWriter designFile = File.CreateText(designFilePath);
-                designFile.WriteLine(string.Format(Resources.ArchiveDesign, archiveOutputPath, TocName, Regex));
+                designFile.WriteLine(string.Format(Resources.ArchiveDesign, ArchiveAlias, TocName, Regex));
                 designFile.Flush();
                 designFile.Close();
             }
@@ -128,6 +133,8 @@ namespace ModTool.Core
         public string Regex { get; private set; }
 
         public string InputDirectory { get; private set; }
+
+        public string ArchiveAlias { get; set; }
 
         #endregion
 

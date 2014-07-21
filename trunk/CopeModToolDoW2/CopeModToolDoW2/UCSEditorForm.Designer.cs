@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.m_ucsEditor = new ModTool.FE.UCSEditor();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.m_btnClose = new System.Windows.Forms.Button();
+            this.m_ucsEditor = new ModTool.FE.UCSEditor();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -50,15 +50,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(681, 411);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // m_ucsEditor
-            // 
-            this.m_ucsEditor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_ucsEditor.Location = new System.Drawing.Point(3, 3);
-            this.m_ucsEditor.MinimumSize = new System.Drawing.Size(465, 200);
-            this.m_ucsEditor.Name = "m_ucsEditor";
-            this.m_ucsEditor.Size = new System.Drawing.Size(675, 372);
-            this.m_ucsEditor.TabIndex = 1;
             // 
             // tableLayoutPanel2
             // 
@@ -84,6 +75,15 @@
             this.m_btnClose.UseVisualStyleBackColor = true;
             this.m_btnClose.Click += new System.EventHandler(this.BtnCloseClick);
             // 
+            // m_ucsEditor
+            // 
+            this.m_ucsEditor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.m_ucsEditor.Location = new System.Drawing.Point(3, 3);
+            this.m_ucsEditor.MinimumSize = new System.Drawing.Size(465, 200);
+            this.m_ucsEditor.Name = "m_ucsEditor";
+            this.m_ucsEditor.Size = new System.Drawing.Size(675, 372);
+            this.m_ucsEditor.TabIndex = 1;
+            // 
             // UCSEditorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -97,6 +97,7 @@
             this.Name = "UCSEditorForm";
             this.ShowIcon = false;
             this.Text = "UCSEditorForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.OnFormClosing);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);

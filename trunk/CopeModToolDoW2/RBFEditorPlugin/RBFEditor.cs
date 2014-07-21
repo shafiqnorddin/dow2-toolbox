@@ -23,6 +23,7 @@ using System;
 using System.Windows.Forms;
 using cope.DawnOfWar2;
 using cope.DawnOfWar2.RelicBinary;
+using cope.Extensions;
 using cope.Helper;
 using cope.IO;
 using cope.SpaceMarine.BAF;
@@ -144,7 +145,7 @@ namespace RBFPlugin
             m_rbf.UseKeyProvider = RBFSettings.UseKeyProviderForSaving;
             m_rbf.WriteDataTo(path);
             m_rbf.FilePath = path;
-            if (ModManager.RBFKeyProvider.NeedsUpdate())
+            if (ModManager.RBFKeyProvider != null && ModManager.RBFKeyProvider.NeedsUpdate())
                 ModManager.RBFKeyProvider.Update();
         }
 

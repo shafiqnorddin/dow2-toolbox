@@ -29,6 +29,7 @@ using System.Xml;
 using cope;
 using cope.DawnOfWar2;
 using cope.DawnOfWar2.RelicAttribute;
+using cope.Extensions;
 using ModTool.Core;
 using cope.Helper;
 

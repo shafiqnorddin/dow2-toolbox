@@ -22,8 +22,9 @@ THE SOFTWARE.
 using System;
 using System.IO;
 using System.Windows.Forms;
+using cope;
 using cope.DawnOfWar2;
-using cope.Helper;
+using cope.Extensions;
 using ModTool.Core;
 
 namespace ModTool.FE
