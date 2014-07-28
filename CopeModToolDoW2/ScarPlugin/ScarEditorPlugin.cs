@@ -22,7 +22,7 @@ THE SOFTWARE.
 using System;
 using System.IO;
 using System.Xml;
-using cope.IO;
+using cope.DawnOfWar2;
 using ICSharpCode.AvalonEdit.Highlighting;
 using ModTool.Core;
 using ModTool.Core.PlugIns;

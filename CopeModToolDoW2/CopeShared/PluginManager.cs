@@ -19,15 +19,15 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
  */
+using cope;
+using cope.Extensions;
+using ModTool.Core.PlugIns;
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
-using cope.Extensions;
-using cope;
-using ModTool.Core.PlugIns;
 
 namespace ModTool.Core
 {

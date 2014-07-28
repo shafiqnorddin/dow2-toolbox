@@ -19,19 +19,18 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
  */
+using cope;
+using cope.DawnOfWar2;
+using cope.DawnOfWar2.RelicAttribute;
+using cope.Extensions;
+using cope.UI;
+using ModTool.Core;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using cope;
-using cope.DawnOfWar2.RelicAttribute;
-using cope.Extensions;
-using cope.IO;
-using cope.UI;
-using ModTool.Core;
-using cope.DawnOfWar2;
 
 namespace RBFPlugin
 {
