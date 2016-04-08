@@ -1,0 +1,22 @@
+# Introduction #
+
+The DoW2 Toolbox is a collection of tools made for modding Dawn of War 2 including its addons Chaos Rising and Retribution.
+
+The most important information:
+  * written in C# using Visual Studio
+  * uses standard C# notation (methods starting with capital letters, CamelCase)
+  * currently consists of 6 separate project files:
+    1. _CopeModToolDoW2_ contains mainly user interface elements
+    1. _CopeShared_ contains mainly manager classes
+    1. _ImageViewerPlugin_ is a plugin for the Toolbox which allows images to be viewed
+    1. _RBFEditorPlugin_ is a plugin as well and includes an RBF editor
+    1. _ScarPlugin_ is a plugin and offers very basic SCAR support (syntax highlighting)
+    1. _ModDebug_ is a DLL that enables advanced debugging capabilities by injecting itself into the Game
+  * all the code for actually reading/writing game file formats isn't part of this project but of _cope.DawnOfWar2.dll_ from the cope-framework (see further below)
+
+
+---
+
+
+Uses parts of the cope-framework; available here: http://www.s-schoener.com/files/cope_framework.zip
+Parts of this framework are planned to go open source soon as well (with _cope.DawnOfWar2_ being merged with the Toolbox).
