@@ -206,7 +206,7 @@ namespace ModTool.FE
             this.testModToolStripMenuItem,
             this.ucsEditorToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.toolsToolStripMenuItem.Text = "Tools";
             // 
             // aboutToolStripMenuItem
@@ -292,7 +292,7 @@ namespace ModTool.FE
             // 
             this.toggleDirectoryViewToolStripMenuItem.Name = "toggleDirectoryViewToolStripMenuItem";
             this.toggleDirectoryViewToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Tab)));
-            this.toggleDirectoryViewToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
+            this.toggleDirectoryViewToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
             this.toggleDirectoryViewToolStripMenuItem.Text = "Toggle Directory View";
             this.toggleDirectoryViewToolStripMenuItem.Click += new System.EventHandler(this.ToggleDirectoryViewToolStripMenuItemClick);
             // 
@@ -403,7 +403,7 @@ namespace ModTool.FE
             this.pasteFileToolStripMenuItem_combined});
             this.m_cmsFileTreeCombined.Name = "cms_directory_view";
             this.m_cmsFileTreeCombined.ShowImageMargin = false;
-            this.m_cmsFileTreeCombined.Size = new System.Drawing.Size(223, 268);
+            this.m_cmsFileTreeCombined.Size = new System.Drawing.Size(223, 246);
             // 
             // createFolderToolStripMenuItem
             // 
@@ -700,7 +700,7 @@ namespace ModTool.FE
             this.MainMenuStrip = this.m_mesMain;
             this.MinimumSize = new System.Drawing.Size(462, 100);
             this.Name = "MainDialog";
-            this.Text = "Cope\'s DoW2 Toolbox";
+            this.Text = "Cope\'s DoW2 Toolbox (TheHelplessCelt Fork)";
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.MainDialogDragDrop);
             this.DragOver += new System.Windows.Forms.DragEventHandler(this.MainDialogDragOver);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TbcAppsKeyDown);

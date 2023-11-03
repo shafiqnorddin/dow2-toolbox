@@ -26,7 +26,7 @@ namespace ModTool.FE
 {
     public partial class LoadForm : Form
     {
-        private const string PAYPAL_LINK = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YQSUMDHMZ9YC4";
+        private const string PAYPAL_LINK = "https://ko-fi.com/thehelplesscelt";
 
         public LoadForm()
         {
