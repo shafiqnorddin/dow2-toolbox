@@ -1,0 +1,11 @@
+D:\modding_stuff\copeFrameWork\cope.DawnOfWar2\bin\x86\Release\cope.DawnOfWar2.XML
+D:\modding_stuff\copeFrameWork\cope.DawnOfWar2\bin\x86\Release\cope.DawnOfWar2.dll
+D:\modding_stuff\copeFrameWork\cope.DawnOfWar2\bin\x86\Release\cope.DawnOfWar2.pdb
+D:\modding_stuff\copeFrameWork\cope.DawnOfWar2\bin\x86\Release\cope.dll
+D:\modding_stuff\copeFrameWork\cope.DawnOfWar2\bin\x86\Release\cope.pdb
+D:\modding_stuff\copeFrameWork\cope.DawnOfWar2\bin\x86\Release\cope.xml
+D:\modding_stuff\copeFrameWork\cope.DawnOfWar2\obj\x86\Release\cope.DawnOfWar2.csproj.AssemblyReference.cache
+D:\modding_stuff\copeFrameWork\cope.DawnOfWar2\obj\x86\Release\cope.DawnOfWar2.csproj.CoreCompileInputs.cache
+D:\modding_stuff\copeFrameWork\cope.DawnOfWar2\obj\x86\Release\cope.DawnOfWar2.csproj.CopyComplete
+D:\modding_stuff\copeFrameWork\cope.DawnOfWar2\obj\x86\Release\cope.DawnOfWar2.dll
+D:\modding_stuff\copeFrameWork\cope.DawnOfWar2\obj\x86\Release\cope.DawnOfWar2.pdb

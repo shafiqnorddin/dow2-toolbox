@@ -24,6 +24,8 @@ using cope.DawnOfWar2;
 using ICSharpCode.AvalonEdit.Highlighting;
 using ModTool.Core.PlugIns;
 using ICSharpCode.AvalonEdit;
+using cope.Extensions;
+using ModTool.Core;
 
 namespace ScarPlugin
 {

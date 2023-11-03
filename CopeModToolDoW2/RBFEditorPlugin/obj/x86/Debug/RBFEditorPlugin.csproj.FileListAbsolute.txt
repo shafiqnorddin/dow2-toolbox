@@ -1,0 +1,15 @@
+D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\RBFEditorPlugin\obj\x86\Debug\RBFEditorPlugin.csproj.AssemblyReference.cache
+D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\RBFEditorPlugin\obj\x86\Debug\RBFPlugin.AddToLibrary.resources
+D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\RBFEditorPlugin\obj\x86\Debug\RBFPlugin.DictionaryCrawler.resources
+D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\RBFEditorPlugin\obj\x86\Debug\RBFPlugin.LibraryCrawlerForm.resources
+D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\RBFEditorPlugin\obj\x86\Debug\RBFPlugin.Properties.Resources.resources
+D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\RBFEditorPlugin\obj\x86\Debug\RBFPlugin.RBFConvParserControl.resources
+D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\RBFEditorPlugin\obj\x86\Debug\RBFPlugin.RBFConvParserForm.resources
+D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\RBFEditorPlugin\obj\x86\Debug\RBFPlugin.RBFEditor.resources
+D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\RBFEditorPlugin\obj\x86\Debug\RBFPlugin.RBFEditorCore.resources
+D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\RBFEditorPlugin\obj\x86\Debug\RBFPlugin.RBFLibraryEditor.resources
+D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\RBFEditorPlugin\obj\x86\Debug\RBFPlugin.RBFOptionsDialog.resources
+D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\RBFEditorPlugin\obj\x86\Debug\RBFPlugin.RBFSearchForm.resources
+D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\RBFEditorPlugin\obj\x86\Debug\RBFPlugin.TagEditor.resources
+D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\RBFEditorPlugin\obj\x86\Debug\RBFEditorPlugin.csproj.GenerateResource.cache
+D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\RBFEditorPlugin\obj\x86\Debug\RBFEditorPlugin.csproj.CoreCompileInputs.cache

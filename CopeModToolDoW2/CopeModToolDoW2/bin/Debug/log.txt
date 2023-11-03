@@ -1,0 +1,26 @@
+13:26:25 - LoggingManager - Logging system set up successfully!
+13:26:25 - ConfigManager - Setting up config system...
+13:26:25 - ConfingManager - No plugins.config found, creating one from scratch
+13:26:25 - ConfigManager - Config system set up successfully!
+13:26:25 - Tool starting...
+13:26:25 - Could not determine last used path, setting it to default path.
+13:26:25 - Trying to get Steam path from the registry
+13:26:25 - ModManager - GameDirectory changed to c:/program files (x86)/steam\steamapps\common\dawn of war ii - retribution\
+13:26:25 - Retribution mode enabled
+13:26:25 - FE - Starting front end...
+13:26:25 - FE - FileTree controls setup started
+13:26:25 - FE - FileTree controls setup finished
+13:26:25 - FE - Front end successfully started!
+13:26:25 - PluginManager - Attempting to load plugins from plugins-folder D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeModToolDoW2\bin\Debug\plugins\
+13:26:25 - No DoW2 language found, setting it to default (English)
+13:26:25 - ModManager - Language set to English
+13:26:25 - UCSManager - Initializing...
+13:26:41 - ModManager - Closing current mod (if any is loaded)
+13:26:41 - FileManager - Releasing file trees
+13:26:41 - UCSManager - UCS file is empty, nothing to save.
+13:26:41 - ModManager - Manual GarbageCollection in all generations in progess...
+13:26:41 - ModManager - Closing current mod (if any is loaded)
+13:26:41 - FileManager - Releasing file trees
+13:26:41 - UCSManager - UCS file is empty, nothing to save.
+13:26:41 - ModManager - Manual GarbageCollection in all generations in progess...
+13:26:41 - Application shutting down

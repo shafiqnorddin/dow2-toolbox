@@ -1,0 +1,11 @@
+D:\modding_stuff\copeFrameWork\cope\bin\x86\Release\cope.XML
+D:\modding_stuff\copeFrameWork\cope\bin\x86\Release\cope.dll
+D:\modding_stuff\copeFrameWork\cope\bin\x86\Release\cope.pdb
+D:\modding_stuff\copeFrameWork\cope\obj\x86\Release\cope.csproj.AssemblyReference.cache
+D:\modding_stuff\copeFrameWork\cope\obj\x86\Release\cope.UI.DoubleBufferedPanel.resources
+D:\modding_stuff\copeFrameWork\cope\obj\x86\Release\cope.UI.DragBox.resources
+D:\modding_stuff\copeFrameWork\cope\obj\x86\Release\cope.UI.DragPlane.resources
+D:\modding_stuff\copeFrameWork\cope\obj\x86\Release\cope.csproj.GenerateResource.cache
+D:\modding_stuff\copeFrameWork\cope\obj\x86\Release\cope.csproj.CoreCompileInputs.cache
+D:\modding_stuff\copeFrameWork\cope\obj\x86\Release\cope.dll
+D:\modding_stuff\copeFrameWork\cope\obj\x86\Release\cope.pdb
