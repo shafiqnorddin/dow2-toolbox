@@ -9,14 +9,3 @@ D:\modding_stuff\copeFrameWork\cope.Graphics\obj\x86\Debug\cope.Graphics.csproj.
 D:\modding_stuff\copeFrameWork\cope.Graphics\obj\x86\Debug\cope.Graphics.csproj.CopyComplete
 D:\modding_stuff\copeFrameWork\cope.Graphics\obj\x86\Debug\cope.Graphics.dll
 D:\modding_stuff\copeFrameWork\cope.Graphics\obj\x86\Debug\cope.Graphics.pdb
-D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope.Graphics\bin\x86\Debug\cope.Graphics.dll
-D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope.Graphics\bin\x86\Debug\cope.Graphics.pdb
-D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope.Graphics\bin\x86\Debug\cope.dll
-D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope.Graphics\bin\x86\Debug\cope.Maths.dll
-D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope.Graphics\bin\x86\Debug\cope.Maths.pdb
-D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope.Graphics\bin\x86\Debug\cope.pdb
-D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope.Graphics\obj\x86\Debug\cope.Graphics.csproj.AssemblyReference.cache
-D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope.Graphics\obj\x86\Debug\cope.Graphics.csproj.CoreCompileInputs.cache
-D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope.Graphics\obj\x86\Debug\cope.Graphics.csproj.CopyComplete
-D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope.Graphics\obj\x86\Debug\cope.Graphics.dll
-D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope.Graphics\obj\x86\Debug\cope.Graphics.pdb

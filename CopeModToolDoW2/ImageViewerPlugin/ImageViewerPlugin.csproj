@@ -70,7 +70,7 @@
     <OutputPath>..\CopeModToolDoW2\bin\x86\Release\plugins\filetypes\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
+    <DebugType>none</DebugType>
     <PlatformTarget>x86</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
@@ -142,6 +142,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\FreeImageNET.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FreeImage.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

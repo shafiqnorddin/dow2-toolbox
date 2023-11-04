@@ -63,6 +63,16 @@ namespace ImageViewerPlugin.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] FreeImage {
+            get {
+                object obj = ResourceManager.GetObject("FreeImage", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] FreeImageNET {
             get {
                 object obj = ResourceManager.GetObject("FreeImageNET", resourceCulture);

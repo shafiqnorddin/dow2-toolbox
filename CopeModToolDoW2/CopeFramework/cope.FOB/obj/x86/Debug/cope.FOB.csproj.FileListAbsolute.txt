@@ -5,10 +5,3 @@ D:\modding_stuff\copeFrameWork\cope.FOB\obj\x86\Debug\cope.FOB.csproj.AssemblyRe
 D:\modding_stuff\copeFrameWork\cope.FOB\obj\x86\Debug\cope.FOB.csproj.CoreCompileInputs.cache
 D:\modding_stuff\copeFrameWork\cope.FOB\obj\x86\Debug\cope.FOB.dll
 D:\modding_stuff\copeFrameWork\cope.FOB\obj\x86\Debug\cope.FOB.pdb
-D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope.FOB\bin\x86\Debug\cope.FOB.dll.config
-D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope.FOB\bin\x86\Debug\cope.FOB.dll
-D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope.FOB\bin\x86\Debug\cope.FOB.pdb
-D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope.FOB\obj\x86\Debug\cope.FOB.csproj.AssemblyReference.cache
-D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope.FOB\obj\x86\Debug\cope.FOB.csproj.CoreCompileInputs.cache
-D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope.FOB\obj\x86\Debug\cope.FOB.dll
-D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope.FOB\obj\x86\Debug\cope.FOB.pdb

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <ReferencePath>D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope\bin\Debug\;D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope.DawnOfWar2\bin\Debug\;D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope.FOB\bin\Debug\;D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope.Debug\bin\Debug\</ReferencePath>
+    <ReferencePath>D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope\bin\x86\Debug\;D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope.DawnOfWar2\bin\x86\Debug\;D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope.Debug\bin\x86\Debug\;D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope.FOB\bin\x86\Debug\</ReferencePath>
   </PropertyGroup>
 </Project>

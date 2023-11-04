@@ -8,13 +8,3 @@ D:\modding_stuff\copeFrameWork\cope\obj\x86\Debug\cope.csproj.GenerateResource.c
 D:\modding_stuff\copeFrameWork\cope\obj\x86\Debug\cope.csproj.CoreCompileInputs.cache
 D:\modding_stuff\copeFrameWork\cope\obj\x86\Debug\cope.dll
 D:\modding_stuff\copeFrameWork\cope\obj\x86\Debug\cope.pdb
-D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope\bin\x86\Debug\cope.dll
-D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope\bin\x86\Debug\cope.pdb
-D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope\obj\x86\Debug\cope.csproj.AssemblyReference.cache
-D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope\obj\x86\Debug\cope.UI.DoubleBufferedPanel.resources
-D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope\obj\x86\Debug\cope.UI.DragBox.resources
-D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope\obj\x86\Debug\cope.UI.DragPlane.resources
-D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope\obj\x86\Debug\cope.csproj.GenerateResource.cache
-D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope\obj\x86\Debug\cope.csproj.CoreCompileInputs.cache
-D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope\obj\x86\Debug\cope.dll
-D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope\obj\x86\Debug\cope.pdb

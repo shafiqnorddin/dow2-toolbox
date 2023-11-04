@@ -8,13 +8,3 @@ D:\modding_stuff\copeFrameWork\cope.Relic\obj\x86\Debug\cope.Relic.csproj.CoreCo
 D:\modding_stuff\copeFrameWork\cope.Relic\obj\x86\Debug\cope.Relic.csproj.CopyComplete
 D:\modding_stuff\copeFrameWork\cope.Relic\obj\x86\Debug\cope.Relic.dll
 D:\modding_stuff\copeFrameWork\cope.Relic\obj\x86\Debug\cope.Relic.pdb
-D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope.Relic\bin\x86\Debug\cope.Relic.dll
-D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope.Relic\bin\x86\Debug\cope.Relic.pdb
-D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope.Relic\bin\x86\Debug\cope.dll
-D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope.Relic\bin\x86\Debug\Ionic.Zlib.dll
-D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope.Relic\bin\x86\Debug\cope.pdb
-D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope.Relic\obj\x86\Debug\cope.Relic.csproj.AssemblyReference.cache
-D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope.Relic\obj\x86\Debug\cope.Relic.csproj.CoreCompileInputs.cache
-D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope.Relic\obj\x86\Debug\cope.Relic.csproj.CopyComplete
-D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope.Relic\obj\x86\Debug\cope.Relic.dll
-D:\modding_stuff\dow2-toolbox-rebuild\CopeModToolDoW2\CopeFramework\cope.Relic\obj\x86\Debug\cope.Relic.pdb
